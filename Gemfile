@@ -5,7 +5,18 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
+# views and stylesheets use haml
+gem 'haml'
+
+# use paperclip for file storage over amazon S3
+gem 'paperclip'
+
+# deploy with heroku
+gem 'heroku'
 
 # Use unicorn as the web server
 # gem 'unicorn'

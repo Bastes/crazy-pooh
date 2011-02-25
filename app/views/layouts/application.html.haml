@@ -1,0 +1,11 @@
+!!! 5
+%html(lang='fr')
+  %head
+    %title Crazy-Pooh
+    = stylesheet_link_tag 'jquery-ui/smoothness/jquery-ui-1.8.9.custom.css'
+    = javascript_include_tag 'jquery-1.5.min.js'
+    = javascript_include_tag 'jquery-ui/jquery-ui-1.8.9.custom.min.js'
+    = javascript_include_tag 'rails'
+    = csrf_meta_tag
+  %body
+    = yield
