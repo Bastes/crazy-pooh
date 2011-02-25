@@ -1,4 +1,11 @@
 PortfolioViny::Application.routes.draw do
+  namespace :admin do
+    match 'login' => 'user_session#new', :as => :login
+    match 'logout' => 'user_session#destroy', :as => :logout
+    resource :user_session, :only => [:new, :create, :destroy],
+             :controller => :user_session
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,23 @@
+fr:
+  helpers:
+    submit:
+      user_session:
+        create: "Connexion"
+  activerecord:
+    models:
+      user: "utilisateur"
+    attributes:
+      user:
+        login: "nom d'utilisateur"
+        password: "mot de passe"
+  activemodel:
+    models:
+      user_session: "session"
+    attributes:
+      user_session:
+        login: "nom d'utilisateur"
+        password: "mot de passe"
+    errors:
+      models:
+        user_session:
+          authentication: "Ces nom d'utilisateur et mot de passe ne correspondent pas"
