@@ -21,3 +21,8 @@ fr:
       models:
         user_session:
           authentication: "Ces nom d'utilisateur et mot de passe ne correspondent pas"
+  errors:
+    messages:
+      blank: "ne doit pas être vide"
+      too_short: "est trop court (%{count} caractères minimum)"
+      taken: "est déjà reservé par un(e) autre %{model}"

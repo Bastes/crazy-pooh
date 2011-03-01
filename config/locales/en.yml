@@ -21,3 +21,8 @@ en:
       models:
         user_session:
           authentication: "These login and password doesn't match"
+  errors:
+    messages:
+      blank: "can't be blank"
+      too_short: "is too short (min %{count} characters)"
+      taken: "is already taken by another %{model}"
