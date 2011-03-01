@@ -9,4 +9,7 @@
     = javascript_include_tag 'rails'
     = csrf_meta_tag
   %body
+    %header
+      %h1= yield(:title)
+    %div#notice= flash[:notice]
     = yield
