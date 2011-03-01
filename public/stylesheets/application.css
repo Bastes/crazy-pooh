@@ -1,2 +1,13 @@
-form p label {
+form > div {
+  margin-bottom: 10px; }
+form label {
   display: block; }
+form input {
+  border: solid 1px black; }
+form .field_with_errors {
+  display: inline; }
+  form .field_with_errors input {
+    border-color: red; }
+form .error {
+  display: inline;
+  color: red; }

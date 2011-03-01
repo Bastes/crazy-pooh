@@ -1,7 +1,21 @@
 form {
-  p {
-    label {
-      display: block;
+  & > div {
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+  }
+  input {
+    border: solid 1px black;
+  }
+  .field_with_errors {
+    display: inline;
+    input {
+      border-color: red;
     }
+  }
+  .error {
+    display: inline;
+    color: red;
   }
 }
