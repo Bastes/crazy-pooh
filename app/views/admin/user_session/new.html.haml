@@ -1,6 +1,5 @@
 = form_for @user_session, :url => admin_user_session_path(@user_session) do |f|
-  - if @user_session.errors.any?
-    %div#error= @user_session.errors.full_messages.first
+  = errors_on @user_session
   %div
     = f.label :login
     = f.text_field :login
