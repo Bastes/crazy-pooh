@@ -1,0 +1,5 @@
+- title t('.title')
+%ul
+  - @static_contents.each do |static_content|
+    %li
+      = link_to static_content.codename, [:edit, :admin, static_content]

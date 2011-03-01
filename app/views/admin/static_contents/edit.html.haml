@@ -1,0 +1,8 @@
+- title t('.title', :codename => @static_content.codename)
+= form_for [:admin, @static_content] do |f|
+  %div
+    = f.label :content
+    = f.text_area :content
+    = errors_on @static_content, :content
+  %div
+    = f.submit

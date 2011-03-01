@@ -16,6 +16,11 @@ fr:
     user_session:
       show:
         title: "Administration"
+    static_contents:
+      index:
+        title: "Tous les contenus fixes"
+      edit:
+        title: "Edition du contenu fixe de %{codename}"
   helpers:
     submit:
       create: "Créer ce(tte) %{model}"
@@ -25,10 +30,14 @@ fr:
   activerecord:
     models:
       user: "utilisateur"
+      static_content: "contenu fixe"
     attributes:
       user:
         login: "nom d'utilisateur"
         password: "mot de passe"
+      static_content:
+        codename: "nom de code"
+        content: "contenu"
   activemodel:
     models:
       user_session: "session"

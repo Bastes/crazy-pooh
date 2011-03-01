@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+welcome:
+  codename: "home:welcome"
+  content:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elit diam, vehicula in blandit et, placerat nec justo. Morbi rutrum est vel mi porttitor dictum sodales eros aliquet. Nulla id luctus dolor. Quisque eget varius nisl. Proin sollicitudin magna vel massa rhoncus non viverra tellus blandit. Ut metus sem, eleifend nec ultricies eu, facilisis a elit. Duis at dolor at urna posuere dapibus nec vitae ipsum. Praesent eget ipsum sit amet leo faucibus consequat. Curabitur pretium rutrum mi, ut dictum nibh luctus a. Vivamus lectus eros, aliquam quis sodales quis, vehicula sit amet dolor. Vestibulum mauris arcu, malesuada eget fringilla sed, dapibus vel dolor. Nunc ullamcorper, lacus id lobortis aliquet, nunc neque posuere orci, porta ultrices erat purus vitae libero. Vivamus sed fermentum est. In gravida laoreet eros, non congue lectus vulputate in. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+intellectual_property:
+  codename: "home:intellectual_property"
+  content:
+    Quisque rhoncus urna id mauris consequat commodo. Mauris pulvinar lectus tincidunt dolor vestibulum quis ornare ante iaculis. Donec et ante nibh, ultrices malesuada neque. Vestibulum lorem odio, malesuada et faucibus eget, tincidunt quis est. Ut aliquet elementum faucibus. Aliquam nunc massa, lobortis eget iaculis in, mattis sit amet quam. Donec dapibus orci et metus consequat vitae eleifend quam adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, sapien quis tristique ullamcorper, justo enim dapibus augue, id placerat odio risus eu enim. Morbi vel sapien enim, non hendrerit purus. Quisque imperdiet mollis molestie. Nulla facilisi. Nullam vel leo non sapien tristique tincidunt ac ac purus. Integer tincidunt luctus tellus, non molestie lorem varius id. Pellentesque eget ultrices mi. Sed condimentum eros eu sem ultricies bibendum.

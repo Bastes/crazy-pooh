@@ -15,6 +15,11 @@ en:
     user_session:
       show:
         title: "Administration"
+    static_contents:
+      index:
+        title: "All static contents"
+      edit:
+        title: "Edit the static content for %{codename}"
   helpers:
     submit:
       create: "Create this %{model}"
@@ -24,13 +29,18 @@ en:
   activerecord:
     models:
       user: "user"
+      static_content: "contenu fixe"
     attributes:
       user:
         login: "login"
         password: "password"
+      static_content:
+        codename: "code name"
+        content: "content"
   activemodel:
     models:
       user_session: "session"
+      static_content: "contenu fixe"
     attributes:
       user_session:
         login: "login"
