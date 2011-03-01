@@ -10,6 +10,11 @@
     = csrf_meta_tag
   %body
     %header
+      - if admin?
+        = link_to t('.header.logged_as', :login => user.login), edit_admin_user_path
+        = link_to t('.header.logout'), admin_logout_path
+      - else
+        = link_to t('.header.login'), admin_login_path
       %h1= yield(:title)
     %div#notice= flash[:notice]
     = yield

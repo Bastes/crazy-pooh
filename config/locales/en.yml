@@ -1,4 +1,9 @@
 en:
+  layouts:
+    admin:
+      logout: "Log in"
+      logged_as: "Logged as \"%{login}\""
+      login: "Log out"
   helpers:
     submit:
       user_session:

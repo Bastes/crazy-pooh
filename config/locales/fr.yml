@@ -1,4 +1,10 @@
 fr:
+  layouts:
+    admin:
+      header:
+        login: "Connexion"
+        logged_as: "Connecté en tant que  \"%{login}\""
+        logout: "Déconnexion"
   helpers:
     submit:
       user_session:

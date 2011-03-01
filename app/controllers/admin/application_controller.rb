@@ -3,18 +3,22 @@ class Admin::ApplicationController < ActionController::Base
 
   layout 'admin'
 
+  before_filter :restricted
+
   protected
 
   def admin?
-    session[:user_session] && session[:user_session].valid?
+    user && true
   end
   helper_method :admin?
 
   def user
-    admin? && session[:user_session].user
+    @user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  helper_method :user
 
   def restricted
-    redirect_to login_path unless admin?
+    Rails.logger.debug "session: #{session.inspect}"
+    head :forbidden unless admin?
   end
 end

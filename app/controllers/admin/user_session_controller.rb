@@ -1,4 +1,5 @@
 class Admin::UserSessionController < Admin::ApplicationController
+  skip_before_filter :restricted
   def new
     @user_session = UserSession.new
   end
@@ -6,16 +7,16 @@ class Admin::UserSessionController < Admin::ApplicationController
   def create
     @user_session = UserSession.new params[:user_session]
     if @user_session.valid?
-      session[:user_session] = @user_session
-      # redirect_to admin_url # FIXME
+      session[:user_id] = @user_session.user.id
+      redirect_to :action => :show
     else
-      session[:user_session] = nil
+      session[:user_id] = nil
       render :action => :new
     end
   end
 
   def destroy
-    session[:user_session] = nil
+    session[:user_id] = nil
     # redirect_to root_url # FIXME
   end
 end
