@@ -1,0 +1,12 @@
+- title t('.title')
+= form_for @user, :url => admin_user_path(@user) do |f|
+  %div
+    = f.label :login
+    = f.text_field :login
+    = errors_on @user, :login
+  %div
+    = f.label :password
+    = f.text_field :password
+    = errors_on @user, :password
+  %div
+    = f.submit

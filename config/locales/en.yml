@@ -8,6 +8,10 @@ en:
       logout: "Log in"
       logged_as: "Logged as \"%{login}\""
       login: "Log out"
+  admin:
+    user:
+      edit:
+        title: "Edit your user informations"
   helpers:
     submit:
       user_session:

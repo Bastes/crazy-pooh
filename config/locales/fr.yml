@@ -9,6 +9,10 @@ fr:
         login: "Connexion"
         logged_as: "Connecté en tant que  \"%{login}\""
         logout: "Déconnexion"
+  admin:
+    user:
+      edit:
+        title: "Edition de vos informations utilisateur"
   helpers:
     submit:
       user_session:
