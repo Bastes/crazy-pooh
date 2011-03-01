@@ -17,6 +17,8 @@ en:
         title: "Administration"
   helpers:
     submit:
+      create: "Create this %{model}"
+      update: "Update this %{model}"
       user_session:
         create: "Log in"
   activerecord:

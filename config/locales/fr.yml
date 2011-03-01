@@ -18,6 +18,8 @@ fr:
         title: "Administration"
   helpers:
     submit:
+      create: "Créer ce(tte) %{model}"
+      update: "Mettre à jour ce(tte) %{model}"
       user_session:
         create: "Connexion"
   activerecord:
