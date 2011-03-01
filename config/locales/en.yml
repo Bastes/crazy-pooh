@@ -1,4 +1,8 @@
 en:
+  notices:
+    created: "%{model} created"
+    updated: "%{model} updated"
+    deleted: "%{model} deleted"
   layouts:
     admin:
       logout: "Log in"

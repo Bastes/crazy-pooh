@@ -1,4 +1,8 @@
 fr:
+  notices:
+    created: "%{model} créé(e)"
+    updated: "%{model} mis(e) à jour"
+    deleted: "%{model} supprimé(e)"
   layouts:
     admin:
       header:
