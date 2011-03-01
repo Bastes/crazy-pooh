@@ -12,6 +12,9 @@ en:
     user:
       edit:
         title: "Edit your user informations"
+    user_session:
+      show:
+        title: "Administration"
   helpers:
     submit:
       user_session:

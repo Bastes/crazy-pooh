@@ -13,6 +13,9 @@ fr:
     user:
       edit:
         title: "Edition de vos informations utilisateur"
+    user_session:
+      show:
+        title: "Administration"
   helpers:
     submit:
       user_session:

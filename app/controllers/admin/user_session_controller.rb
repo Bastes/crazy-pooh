@@ -1,5 +1,9 @@
 class Admin::UserSessionController < Admin::ApplicationController
-  skip_before_filter :restricted
+  skip_before_filter :restricted, :except => :show
+
+  def show
+  end
+
   def new
     @user_session = UserSession.new
   end

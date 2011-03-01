@@ -2,7 +2,7 @@ PortfolioViny::Application.routes.draw do
   namespace :admin do
     match 'login' => 'user_session#new', :as => :login
     match 'logout' => 'user_session#destroy', :as => :logout
-    resource :user_session, :only => [:new, :create, :destroy],
+    resource :user_session, :only => [:show, :new, :create, :destroy],
              :controller => :user_session
     resource :user, :only => [:edit, :update],
              :controller => :user
