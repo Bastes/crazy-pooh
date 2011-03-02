@@ -5,9 +5,10 @@ en:
     deleted: "%{model} deleted"
   layouts:
     admin:
-      logout: "Log in"
-      logged_as: "Logged as \"%{login}\""
-      login: "Log out"
+      header:
+        login: "Log in"
+        logged_as: "Logged as \"%{login}\""
+        logout: "Log out"
   admin:
     user:
       edit:
@@ -40,7 +41,6 @@ en:
   activemodel:
     models:
       user_session: "session"
-      static_content: "contenu fixe"
     attributes:
       user_session:
         login: "login"
