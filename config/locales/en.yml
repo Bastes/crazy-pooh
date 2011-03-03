@@ -30,7 +30,7 @@ en:
   activerecord:
     models:
       user: "user"
-      static_content: "contenu fixe"
+      static_content: "static content"
     attributes:
       user:
         login: "login"
