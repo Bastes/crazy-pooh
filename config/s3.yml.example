@@ -1,0 +1,4 @@
+development:
+  access_key_id: <<your_key_id_here>>
+  secret_access_key: <<your_secret_access_key_here>>
+  bucket: <<your_bucket_here>>

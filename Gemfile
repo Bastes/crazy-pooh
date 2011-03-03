@@ -13,6 +13,7 @@ end
 gem 'haml'
 
 # use paperclip for file storage over amazon S3
+gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
 
 # deploy with heroku
