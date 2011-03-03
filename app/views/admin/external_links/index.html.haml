@@ -1,0 +1,18 @@
+- title t('.title')
+%ul
+  - @external_links.group_by(&:section).each do |section|
+    %li
+      %b= section[0]
+      %ol
+        - section[1].each do |external_link|
+          %li
+            = link_to [:edit, :admin, external_link] do
+              - if external_link.banner.file?
+                = image_tag external_link.banner.url,
+                            :alt => external_link.label
+              - else
+                = external_link.label
+            = button_to t('links.delete', :model => ExternalLink.human_name),
+                        [:admin, external_link], :method => :delete
+= link_to t('links.new', :model => ExternalLink.human_name),
+          new_admin_external_link_path

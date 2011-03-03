@@ -1,4 +1,7 @@
 en:
+  links:
+    new: "new %{model}"
+    delete: "delete"
   notices:
     created: "%{model} created"
     updated: "%{model} updated"
@@ -21,6 +24,13 @@ en:
         title: "All static contents"
       edit:
         title: "Edit the static content for %{codename}"
+    external_links:
+      index:
+        title: "All external links"
+      new:
+        title: "Create a new external link"
+      edit:
+        title: "Edit the external link"
   helpers:
     submit:
       create: "Create this %{model}"
@@ -31,6 +41,7 @@ en:
     models:
       user: "user"
       static_content: "static content"
+      external_links: "external link"
     attributes:
       user:
         login: "login"
@@ -38,6 +49,13 @@ en:
       static_content:
         codename: "code name"
         content: "content"
+      external_link:
+        section: "section"
+        rank: "rank"
+        label: "label"
+        description: "description"
+        url: "url"
+        banner: "banner"
   activemodel:
     models:
       user_session: "session"

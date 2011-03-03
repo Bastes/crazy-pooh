@@ -10,7 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301162936) do
+ActiveRecord::Schema.define(:version => 20110301220840) do
+
+  create_table "external_links", :force => true do |t|
+    t.string   "section"
+    t.integer  "rank"
+    t.string   "label"
+    t.text     "description"
+    t.text     "url"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "external_links", ["rank"], :name => "index_external_links_on_rank"
+  add_index "external_links", ["section"], :name => "index_external_links_on_section"
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false

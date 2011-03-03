@@ -1,0 +1,29 @@
+= form_for [:admin, @external_link], :html => { :multipart => true } do |f|
+  %div
+    = f.label :section
+    = f.text_field :section
+    = errors_on @external_link, :section
+  %div
+    = f.label :rank
+    = f.text_field :rank
+    = errors_on @external_link, :rank
+  %div
+    = f.label :label
+    = f.text_field :label
+    = errors_on @external_link, :label
+  %div
+    = f.label :description
+    = f.text_field :description
+    = errors_on @external_link, :description
+  %div
+    = f.label :url
+    = f.text_field :url
+    = errors_on @external_link, :url
+  %div
+    = f.label :banner
+    = f.file_field :banner
+    - if @external_link.banner.file?
+      = image_tag @external_link.banner.url, :alt => @external_link.label
+    = errors_on @external_link, :banner
+  %div
+    = f.submit

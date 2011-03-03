@@ -7,6 +7,7 @@ PortfolioViny::Application.routes.draw do
     resource :user, :only => [:edit, :update],
              :controller => :user
     resources :static_contents, :only => [:index, :edit, :update]
+    resources :external_links
   end
 
   # The priority is based upon order of creation:

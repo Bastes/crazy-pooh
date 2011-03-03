@@ -1,4 +1,7 @@
 fr:
+  links:
+    new: "créer un(e) %{model}"
+    delete: "supprimer"
   notices:
     created: "%{model} créé(e)"
     updated: "%{model} mis(e) à jour"
@@ -21,6 +24,13 @@ fr:
         title: "Tous les contenus fixes"
       edit:
         title: "Edition du contenu fixe de %{codename}"
+    external_links:
+      index:
+        title: "Tous les liens externes"
+      new:
+        title: "Créer un nouveau lien externe"
+      edit:
+        title: "Editer le lien externe"
   helpers:
     submit:
       create: "Créer ce(tte) %{model}"
@@ -31,6 +41,7 @@ fr:
     models:
       user: "utilisateur"
       static_content: "contenu fixe"
+      external_link: "lien externe"
     attributes:
       user:
         login: "nom d'utilisateur"
@@ -38,6 +49,13 @@ fr:
       static_content:
         codename: "nom de code"
         content: "contenu"
+      external_link:
+        section: "section"
+        rank: "rang"
+        label: "étiquette"
+        description: "description"
+        url: "url"
+        banner: "bannière"
   activemodel:
     models:
       user_session: "session"
