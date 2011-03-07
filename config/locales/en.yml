@@ -41,7 +41,7 @@ en:
     models:
       user: "user"
       static_content: "static content"
-      external_links: "external link"
+      external_link: "external link"
     attributes:
       user:
         login: "login"
