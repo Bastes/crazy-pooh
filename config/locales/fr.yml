@@ -31,6 +31,13 @@ fr:
         title: "Créer un nouveau lien externe"
       edit:
         title: "Editer le lien externe"
+    achievements:
+      index:
+        title: "Toutes les réalisations"
+      new:
+        title: "Créer une nouvelle réalisation"
+      edit:
+        title: "Editer la réalisation"
   helpers:
     submit:
       create: "Créer ce(tte) %{model}"
@@ -42,6 +49,7 @@ fr:
       user: "utilisateur"
       static_content: "contenu fixe"
       external_link: "lien externe"
+      achievement: "réalisations"
     attributes:
       user:
         login: "nom d'utilisateur"
@@ -56,6 +64,12 @@ fr:
         description: "description"
         url: "url"
         banner: "bannière"
+      achievement:
+        section: "section"
+        subsection: "sous section"
+        title: "titre"
+        description: "description"
+        exhibit: "exemple"
   activemodel:
     models:
       user_session: "session"

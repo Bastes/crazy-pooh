@@ -1,0 +1,31 @@
+= form_for [:admin, @achievement], :html => { :multipart => true } do |f|
+  %div
+    = f.label :section
+    = f.text_field :section
+    = errors_on @achievement, :section
+  %div
+    = f.label :subsection
+    = f.text_field :subsection
+    = errors_on @achievement, :subsection
+  %div
+    = f.label :title
+    = f.text_field :title
+    = errors_on @achievement, :title
+  %div
+    = f.label :description
+    = f.text_area :description
+    = errors_on @achievement, :description
+  %div
+    = f.label :exhibit
+    = f.file_field :exhibit
+    - link_to @achievement.exhibit.url, :target => :_blank do
+      = image_tag @achievement.exhibit.url(:thumbnail), :alt => @achievement.title
+    = errors_on @achievement, :exhibit
+  %div
+    = f.text_field :crop_x
+    = f.text_field :crop_y
+  %div
+    = f.text_field :crop_w
+    = f.text_field :crop_h
+  %div
+    = f.submit

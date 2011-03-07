@@ -31,6 +31,13 @@ en:
         title: "Create a new external link"
       edit:
         title: "Edit the external link"
+    achievements:
+      index:
+        title: "All achievements"
+      new:
+        title: "Create a new achievement"
+      edit:
+        title: "Edit the achievement"
   helpers:
     submit:
       create: "Create this %{model}"
@@ -42,6 +49,7 @@ en:
       user: "user"
       static_content: "static content"
       external_link: "external link"
+      achievement: "achievements"
     attributes:
       user:
         login: "login"
@@ -56,6 +64,12 @@ en:
         description: "description"
         url: "url"
         banner: "banner"
+      achievement:
+        section: "section"
+        subsection: "sub section"
+        title: "title"
+        description: "description"
+        exhibit: "exhibit"
   activemodel:
     models:
       user_session: "session"

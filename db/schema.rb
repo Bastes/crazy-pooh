@@ -10,7 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301220840) do
+ActiveRecord::Schema.define(:version => 20110303161923) do
+
+  create_table "achievements", :force => true do |t|
+    t.string   "section"
+    t.string   "subsection"
+    t.string   "title"
+    t.text     "description"
+    t.string   "exhibit_file_name"
+    t.string   "exhibit_content_type"
+    t.integer  "exhibit_file_size"
+    t.datetime "exhibit_updated_at"
+    t.integer  "crop_x"
+    t.integer  "crop_y"
+    t.integer  "crop_w"
+    t.integer  "crop_h"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "achievements", ["created_at"], :name => "index_achievements_on_created_at"
+  add_index "achievements", ["section"], :name => "index_achievements_on_section"
+  add_index "achievements", ["subsection"], :name => "index_achievements_on_subsection"
 
   create_table "external_links", :force => true do |t|
     t.string   "section"

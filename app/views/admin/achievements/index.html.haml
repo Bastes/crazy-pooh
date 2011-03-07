@@ -1,0 +1,19 @@
+- title t('.title')
+%ul
+  - @achievements.group_by(&:section).each do |section|
+    %li
+      %b= section[0]
+      %ul
+        - section[1].group_by(&:subsection).each do |subsection|
+          %li
+            %b= subsection[0]
+            %ul
+              - subsection[1].each do |achievement|
+                %li
+                  = link_to [:edit, :admin, achievement] do
+                    = image_tag achievement.exhibit.url(:thumbnail),
+                                :alt => achievement.title
+                  = button_to t('links.delete', :model => Achievement.human_name),
+                              [:admin, achievement], :method => :delete
+= link_to t('links.new', :model => Achievement.human_name),
+          new_admin_achievement_path
