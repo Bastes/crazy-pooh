@@ -48,3 +48,6 @@ module Paperclip
     end
   end
 end
+
+Dir[File.join(Rails.root, 'lib', 'paperclip_processors', '*.rb')].sort.
+  each { |processor| require(processor) }
