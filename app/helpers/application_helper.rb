@@ -3,6 +3,10 @@ module ApplicationHelper
     content_for(:title, content)
   end
 
+  def specific_includes(&block)
+    content_for(:specific_includes, capture(&block))
+  end
+
   def errors_on(model, field = nil)
     errors = field.nil? ? model.errors.full_messages : model.errors[field]
     if errors.any?
