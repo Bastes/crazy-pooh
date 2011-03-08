@@ -17,9 +17,7 @@ module Paperclip
 
     def crop_command
       target = @attachment.instance
-      Rails.logger.debug("=== CROP COMMAND")
       if target.cropping?
-        Rails.logger.debug("=== CROPPING")
         [ "-crop",
           "#{target.crop_w.to_i}x#{target.crop_h.to_i}" +
           "+#{target.crop_x.to_i}+#{target.crop_y.to_i}" ]

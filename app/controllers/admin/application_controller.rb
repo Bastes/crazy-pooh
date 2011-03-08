@@ -6,7 +6,6 @@ class Admin::ApplicationController < ApplicationController
   protected
 
   def restricted
-    Rails.logger.debug "session: #{session.inspect}"
     head :forbidden unless admin?
   end
 end
