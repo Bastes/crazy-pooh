@@ -1,0 +1,22 @@
+- specific_includes do
+  = stylesheet_link_tag 'home'
+%div#right-column
+  %div#welcome_title
+    %span t('.welcome')
+  %div#welcome
+    %span.left_bracket
+    %span.right_bracket
+    = static_content_tag("home:welcome", :div)
+  = static_content_tag("home:intellectual_property", :div,
+                       :id => 'intellectual_property')
+  %div#links
+    - { 'couleur_bd' => '#FIXME',
+        'photographie' => '#FIXME',
+        'illustration' => '#FIXME',
+        'graphisme' => '#FIXME',
+        'chiyogami' => '#FIXME',
+        'croquis' => '#FIXME',
+        'liens' => '#FIXME',
+        'bio_et_cv' => '#FIXME' }.each do |key, url|
+      = link_to(url, :id => "to_#{key}") do
+        %span= t(".links.#{key}")

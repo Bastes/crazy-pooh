@@ -4,10 +4,29 @@
     %title Crazy-Pooh
     = stylesheet_link_tag 'jquery-ui/smoothness/jquery-ui-1.8.9.custom.css'
     = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'front'
     = javascript_include_tag 'jquery-1.5.min.js'
     = javascript_include_tag 'jquery-ui/jquery-ui-1.8.9.custom.min.js'
     = javascript_include_tag 'rails'
     = yield(:specific_includes)
     = csrf_meta_tag
   %body
-    = yield
+    %div#main
+      %div#header
+        - unless (title_content = yield(:title)).blank?
+          %div#breadcrumb
+            %h1= title_content
+            = link_to(t(".header.back"), root_path)
+        = link_to("CONTACT", "#FIXME", :id => 'contact_link')
+
+      = yield
+
+      %div#footer
+        #p.footer-text
+          2010©Toute reproduction interdite -
+          Design : Virginie Blancher -
+          Integration : Isabelle Lechat -
+          Programmation : Michel Belleville -
+          = link_to("Plan", "#FIXME") + "-"
+          = link_to("Contact", "#FIXME") + "-"
+          Site optimisé en 1024 x 768

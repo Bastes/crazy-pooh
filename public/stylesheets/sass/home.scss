@@ -1,0 +1,132 @@
+@import 'dimensions';
+#main {
+  #right-column {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: $main_height - 20px;
+    width: 160px;
+    text-align: justify;
+    #welcome_title {
+      width: 100%;
+      height: 11px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      background: {
+        image: url('/images/bienvenue.jpg');
+        color: transparent;
+        repeat: no-repeat;
+        position: center;
+      }
+      span {
+        display: none;
+      }
+    }
+    #welcome {
+      position: relative;
+      .left_bracket,
+      .right_bracket {
+        position: absolute;
+        display: block;
+        width: 6px;
+        height: 28px;
+      }
+      .left_bracket {
+        background-image: url(/images/crochet_gauche.jpg);
+        left: -8px;
+        top: 0px;
+      }
+      .right_bracket {
+        background-image: url(/images/crochet_droit.jpg);
+        right: -8px;
+        bottom: 0px;
+      }
+    }
+    #intellectual_property {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+  #links {
+    position: absolute;
+    top: 125px;
+    left: 250px;
+    width: 300px;
+    height: 300px;
+    #to_bio_et_cv,
+    #to_chiyogami,
+    #to_couleur_bd,
+    #to_croquis,
+    #to_graphisme,
+    #to_illustration,
+    #to_liens,
+    #to_photographie {
+      position: absolute;
+      background: {
+        color: transparent;
+        repeat: no-repeat;
+        position: center;
+      }
+      span {
+        display: none;
+      }
+    }
+    #to_bio_et_cv {
+      top: 0px;
+      left: 170px;
+      width: 44px;
+      height: 163px;
+      background-image:url(/images/home_links/bio_et_cv.jpg);
+    }
+    #to_chiyogami {
+      bottom: 0px;
+      right: 0px;
+      width: 78px;
+      height: 241px;
+      background-image:url(/images/home_links/chiyogami.jpg);
+    }
+    #to_couleur_bd {
+      top: 0px;
+      left: 0px;
+      width: 160px;
+      height: 94px;
+      background-image:url(/images/home_links/couleur_bd.jpg);
+    }
+    #to_croquis {
+      top: 0px;
+      right: 0px;
+      width: 78px;
+      height: 53px;
+      background-image:url(/images/home_links/croquis.jpg);
+    }
+    #to_graphisme {
+      top: 170px;
+      left: 84px;
+      width: 129px;
+      height: 69px;
+      background-image:url(/images/home_links/graphisme.jpg);
+    }
+    #to_illustration {
+      bottom: 0px;
+      left: 0px;
+      width: 206px;
+      height: 55px;
+      background-image:url(/images/home_links/illustration.jpg);
+    }
+    #to_liens {
+      top: 105px;
+      left: 84px;
+      width: 76px;
+      height: 50px;
+      background-image:url(/images/home_links/liens.jpg);
+    }
+    #to_photographie {
+      top: 105px;
+      left: 0px;
+      width: 68px;
+      height: 133px;
+      background-image:url(/images/home_links/photographie.jpg);
+    }
+  }
+}

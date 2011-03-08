@@ -1,0 +1,28 @@
+#main {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -412px;
+  width: 824px;
+  height: 560px;
+  border: solid 1px #CCC; }
+  #main #header {
+    position: absolute;
+    bottom: 100%;
+    width: 100%; }
+    #main #header #contact_link {
+      display: block;
+      position: absolute;
+      right: 0px;
+      bottom: 3px;
+      padding-left: 114px;
+      background-image: url("/images/tiret-rose.jpg");
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      background-color: transparent; }
+  #main #footer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding-top: 8px;
+    text-align: center; }

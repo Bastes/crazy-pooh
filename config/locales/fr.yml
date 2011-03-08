@@ -7,11 +7,26 @@ fr:
     updated: "%{model} mis(e) à jour"
     deleted: "%{model} supprimé(e)"
   layouts:
+    application:
+      header:
+        back: "<< retour"
     admin:
       header:
         login: "Connexion"
         logged_as: "Connecté en tant que  \"%{login}\""
         logout: "Déconnexion"
+  home:
+    index:
+      welcome: "Bienvenue"
+      links:
+        :couleur_bd: "Couleur BD"
+        :photographie: "Photographie"
+        :illustration: "Illustration"
+        :graphisme: "Graphisme"
+        :chiyogami: "Chiyogami"
+        :croquis: "Croquis"
+        :liens: "Liens"
+        :bio_et_cv: "Bio et CV"
   admin:
     user:
       edit:
