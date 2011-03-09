@@ -6,7 +6,7 @@ PortfolioViny::Application.routes.draw do
              :controller => :user_session
     resource :user, :only => [:edit, :update],
              :controller => :user
-    resources :static_contents, :only => [:index, :edit, :update]
+    resources :static_contents, :only => [:index, :show, :edit, :update]
     resources :external_links
     resources :achievements
   end
