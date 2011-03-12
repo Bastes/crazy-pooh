@@ -27,6 +27,16 @@ fr:
         :croquis: "Croquis"
         :liens: "Liens"
         :bio_et_cv: "Bio et CV"
+  portfolio:
+    index:
+      title:
+        illustration: "Illustration"
+        couleur_bd: "Couleur BD"
+        photographie: "Photographie"
+        illustration: "Illustration"
+        graphisme: "Graphisme"
+        chiyogami: "Chiyogami"
+        croquis: "Croquis"
   admin:
     user:
       edit:

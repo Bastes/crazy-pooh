@@ -1,0 +1,20 @@
+- title breadcrumb(@achievement || params[:section])
+- specific_includes do
+  = stylesheet_link_tag 'portfolio'
+  = javascript_include_tag 'portfolio'
+%div#achievements
+  - unless @achievements.nil?
+    %ul#subsections
+      - @achievements.group_by(&:subsection).each do |subsection|
+        %li
+          %h2= "[#{subsection[0]}]"
+          %ul.achievements
+            - subsection[1].each do |achievement|
+              %li
+                - link_to(portfolio_path(achievement)) do
+                  = image_tag achievement.exhibit.url(:thumbnail), :alt => achievement.title
+%div#achievement
+  - unless @achievement.nil?
+    %div#description= @achievement.description.html_safe
+    - link_to @achievement.exhibit.url(:original), :id => 'exhibit', :target => '_blank' do
+      = image_tag @achievement.exhibit.url(:showcase), :alt => @achievement.title

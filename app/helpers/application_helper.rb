@@ -28,4 +28,15 @@ module ApplicationHelper
       nil
     end
   end
+
+  def portfolio_path(section_or_achievement)
+    if section_or_achievement.is_a?(Achievement)
+      portfolio_achievement_path(
+        :section => section_or_achievement.section,
+        :subsection => section_or_achievement.subsection,
+        :title => section_or_achievement.title)
+    else
+      portfolio_section_path :section => section_or_achievement
+    end
+  end
 end

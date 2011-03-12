@@ -12,6 +12,9 @@ PortfolioViny::Application.routes.draw do
   end
 
   root :to => 'home#index'
+  match 'portfolio/:section' => 'portfolio#index', :as => :portfolio_section
+  match 'portfolio/:section/:subsection/:title' => 'portfolio#show',
+    :as => :portfolio_achievement
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
