@@ -4,11 +4,13 @@
   top: 50px;
   left: 50%;
   margin-left: -$main_width / 2;
-  width: $main_width;
-  height: $main_height;
+  width: $main_width - $main_padding_width * 2;
+  height: $main_height - $main_padding_height * 2;
+  padding: $main_padding_height $main_padding_width;
   border: solid 1px #CCC;
   #header {
     position: absolute;
+    left: 0px;
     bottom: 100%;
     width: 100%;
     #contact_link {

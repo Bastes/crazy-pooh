@@ -2,12 +2,14 @@
   position: absolute;
   top: 50px;
   left: 50%;
-  margin-left: -412px;
-  width: 824px;
-  height: 560px;
+  margin-left: -408.5px;
+  width: 797px;
+  height: 543px;
+  padding: 10px 10px;
   border: solid 1px #CCC; }
   #main #header {
     position: absolute;
+    left: 0px;
     bottom: 100%;
     width: 100%; }
     #main #header #contact_link {
