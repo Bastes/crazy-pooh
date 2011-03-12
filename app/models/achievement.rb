@@ -1,5 +1,5 @@
 class Achievement < ActiveRecord::Base
-  default_scope :order => 'section ASC, subsection ASC, created_at DESC'
+  default_scope :order => 'section ASC, subsection DESC, created_at DESC'
 
   has_attached_file :exhibit,
                     :storage => :s3,
@@ -7,9 +7,12 @@ class Achievement < ActiveRecord::Base
                     :url => ':s3_domain_url',
                     :path => ":attachment/:style-:id-:basename.:extension",
                     :styles => {
-                      :original => [ '300x>', 'png' ],
-                      :thumbnail => [ '25x25#', 'png' ] },
-                    :processors => [:jcropper]
+                      :showcase => [ '390x555>', 'png' ],
+                      :thumbnail => {
+                        :geometry => '35x35#',
+                        :format => 'png',
+                        :processors => [:jcropper]
+                      } }
 
   validates_attachment_presence :exhibit
   validates_attachment_content_type :exhibit,
