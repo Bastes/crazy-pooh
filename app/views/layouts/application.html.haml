@@ -16,12 +16,12 @@
   %body
     %div#main
       %div#header
-        - unless (title_content = yield(:title)).blank?
-          %div#breadcrumb
-            %h1= title_content
-            = link_to(t(".header.back"), root_path)
         = link_to("CONTACT", "#FIXME", :id => 'contact_link')
-
+      - unless (title_content = yield(:title)).blank?
+        %div#breadcrumb
+          %h1
+            %span= title_content
+          = link_to(t(".header.back"), root_path)
       = yield
 
       %div#footer

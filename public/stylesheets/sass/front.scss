@@ -27,6 +27,20 @@
       }
     }
   }
+  #breadcrumb {
+    h1 {
+      width: 200px;
+      height: 20px;
+      background: {
+        color: transparent;
+        repeat: no-repeat;
+        position: 0px 0px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
   #footer {
     position: absolute;
     top: 100%;
