@@ -1,4 +1,4 @@
-$(function(jQuery) {
+jQuery(function($) {
 // ADMIN TOOLTIP
   (function() {
     var methods = {
