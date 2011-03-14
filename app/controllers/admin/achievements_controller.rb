@@ -12,8 +12,12 @@ class Admin::AchievementsController < Admin::ApplicationController
   end
 
   def create
-    if @achievement = Achievement.create(params[:achievement])
-      redirect_to [:edit, :admin, @achievement]
+    @achievement = Achievement.new.tap { |achievement|
+      %w{x y w h}.each { |k| # paperclip clipping processor fix
+        key = "crop_#{k}"
+        achievement.send("#{key}=".to_sym, params[:achievement][key.to_sym]) }
+      achievement.attributes = params[:achievement] }
+    if @achievement.save
       flash[:notice] = t('notices.created', :model => @achievement.class.model_name.human)
     else
       render :action => :new, :status => :unprocessable_entity
