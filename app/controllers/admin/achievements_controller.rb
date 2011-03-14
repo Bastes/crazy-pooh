@@ -16,7 +16,7 @@ class Admin::AchievementsController < Admin::ApplicationController
       redirect_to [:edit, :admin, @achievement]
       flash[:notice] = t('notices.created', :model => @achievement.class.model_name.human)
     else
-      render :action => :new
+      render :action => :new, :status => :unprocessable_entity
     end
   end
 
@@ -26,7 +26,7 @@ class Admin::AchievementsController < Admin::ApplicationController
       flash[:notice] = t('notices.updated', :model => @achievement.class.model_name.human)
       redirect_to :action => :edit
     else
-      render :action => :edit
+      render :action => :edit, :status => :unprocessable_entity
     end
   end
 
