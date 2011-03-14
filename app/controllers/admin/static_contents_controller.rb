@@ -14,7 +14,7 @@ class Admin::StaticContentsController < Admin::ApplicationController
   def update
     @static_content = StaticContent.find(params[:id])
     if @static_content.update_attributes(params[:static_content])
-      flash[:notice] = t('notices.updated', :model => @static_content.class.human_name)
+      flash[:notice] = t('notices.updated', :model => @static_content.class.model_name.human)
       redirect_to [:admin, @static_content]
     else
       render :action => :edit

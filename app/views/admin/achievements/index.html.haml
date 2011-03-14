@@ -13,7 +13,7 @@
                   = link_to [:edit, :admin, achievement] do
                     = image_tag achievement.exhibit.url(:thumbnail),
                                 :alt => achievement.title
-                  = button_to t('links.delete', :model => Achievement.human_name),
+                  = button_to t('links.delete', :model => Achievement.model_name.human),
                               [:admin, achievement], :method => :delete
-= link_to t('links.new', :model => Achievement.human_name),
+= link_to t('links.new', :model => Achievement.model_name.human),
           new_admin_achievement_path

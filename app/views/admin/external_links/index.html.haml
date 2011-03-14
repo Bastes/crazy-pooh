@@ -12,7 +12,7 @@
                             :alt => external_link.label
               - else
                 = external_link.label
-            = button_to t('links.delete', :model => ExternalLink.human_name),
+            = button_to t('links.delete', :model => ExternalLink.model_name.human),
                         [:admin, external_link], :method => :delete
-= link_to t('links.new', :model => ExternalLink.human_name),
+= link_to t('links.new', :model => ExternalLink.model_name.human),
           new_admin_external_link_path

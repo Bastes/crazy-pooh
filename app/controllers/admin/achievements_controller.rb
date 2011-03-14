@@ -13,8 +13,8 @@ class Admin::AchievementsController < Admin::ApplicationController
 
   def create
     if @achievement = Achievement.create(params[:achievement])
-      flash[:notice] = t('notices.created', :model => @achievement.class.human_name)
       redirect_to [:edit, :admin, @achievement]
+      flash[:notice] = t('notices.created', :model => @achievement.class.model_name.human)
     else
       render :action => :new
     end
@@ -23,7 +23,7 @@ class Admin::AchievementsController < Admin::ApplicationController
   def update
     @achievement = Achievement.find(params[:id])
     if @achievement.update_attributes(params[:achievement])
-      flash[:notice] = t('notices.updated', :model => @achievement.class.human_name)
+      flash[:notice] = t('notices.updated', :model => @achievement.class.model_name.human)
       redirect_to :action => :edit
     else
       render :action => :edit

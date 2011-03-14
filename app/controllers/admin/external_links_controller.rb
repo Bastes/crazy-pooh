@@ -13,7 +13,7 @@ class Admin::ExternalLinksController < Admin::ApplicationController
 
   def create
     if @external_link = ExternalLink.create(params[:external_link])
-      flash[:notice] = t('notices.created', :model => @external_link.class.human_name)
+      flash[:notice] = t('notices.created', :model => @external_link.class.model_name.human)
       redirect_to [:edit, :admin, @external_link]
     else
       render :action => :new
@@ -23,7 +23,7 @@ class Admin::ExternalLinksController < Admin::ApplicationController
   def update
     @external_link = ExternalLink.find(params[:id])
     if @external_link.update_attributes(params[:external_link])
-      flash[:notice] = t('notices.updated', :model => @external_link.class.human_name)
+      flash[:notice] = t('notices.updated', :model => @external_link.class.model_name.human)
       redirect_to :action => :edit
     else
       render :action => :edit
