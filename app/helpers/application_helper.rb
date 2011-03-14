@@ -29,6 +29,37 @@ module ApplicationHelper
     end
   end
 
+  def achievement_subsection_tag(section, subsection, achievements)
+    content_tag(:li, :id => "subsection_#{subsection}") do
+      options = { :class => 'achievements' }
+      if admin?
+        options['data-new-url'] = new_admin_achievement_path(
+          :section => section,
+          :subsection => subsection)
+      end
+      ( content_tag(:h2, "[#{subsection}]") + "\n" +
+        content_tag(:ul, options) do
+          achievements.map { |achievement|
+            achievement_thumbnail_tag(achievement)
+          }.join("\n").html_safe
+        end).html_safe
+    end.html_safe
+  end
+
+  def achievement_thumbnail_tag(achievement)
+    options = {}
+    if admin?
+      options['data-edit-url'] = url_for([:edit, :admin, achievement])
+      options['data-delete-url'] = url_for([:admin, achievement])
+    end
+    content_tag(:li, options) do
+      link_to(portfolio_path(achievement)) do
+        image_tag(achievement.exhibit.url(:thumbnail),
+                  :alt => achievement.title).html_safe
+      end.html_safe
+    end.html_safe
+  end
+
   def portfolio_path(section_or_achievement)
     if section_or_achievement.is_a?(Achievement)
       portfolio_achievement_path(
