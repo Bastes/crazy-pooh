@@ -2,11 +2,7 @@
 %html(lang='fr')
   %head
     %title Crazy-Pooh - Administration
-    = stylesheet_link_tag 'jquery-ui/smoothness/jquery-ui-1.8.9.custom.css'
-    = stylesheet_link_tag 'application'
-    = javascript_include_tag 'jquery-1.5.1.min.js'
-    = javascript_include_tag 'jquery-ui/jquery-ui-1.8.9.custom.min.js'
-    = javascript_include_tag 'rails'
+    = render :partial => 'layouts/common_includes'
     = csrf_meta_tag
   %body
     %header
