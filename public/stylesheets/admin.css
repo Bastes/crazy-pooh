@@ -5,3 +5,18 @@
   background: white; }
   .tooltip a {
     display: block; }
+
+form .cropbox {
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+form div {
+  position: relative; }
+  form div .thumbnail {
+    position: absolute;
+    right: 0px;
+    top: 0px; }
+  form div textarea {
+    height: 200px; }
+form .cropping_data {
+  display: none; }

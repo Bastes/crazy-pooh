@@ -7,3 +7,25 @@
     display: block;
   }
 }
+
+form {
+  .cropbox {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  div {
+    position: relative;
+    .thumbnail {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    textarea {
+      height: 200px;
+    }
+  }
+  .cropping_data {
+    display: none;
+  }
+}

@@ -1,4 +1,70 @@
 jQuery(function($) {
+  var formDialogDefaultWidth = 290,
+      formPictureWidthLimit = 390,
+      formPictureHeightLimit = 555;
+// IMAGE CROPPING
+  (function() {
+    var width = 35;
+    $('body').delegate('form :file', 'change', function() {
+      var myself = $(this),
+          file = this.files[0],
+          mydiv = myself.closest('div'),
+          form = mydiv.closest('form'),
+          crop_x = mydiv.find('input[name$="[crop_x]"]'),
+          crop_y = mydiv.find('input[name$="[crop_y]"]'),
+          crop_w = mydiv.find('input[name$="[crop_w]"]'),
+          crop_h = mydiv.find('input[name$="[crop_h]"]'),
+          cropbox = form.find('.cropbox'),
+          ratio = 1,
+          imageRealWidth = 0,
+          imageRealHeight = 0;
+      if (!(crop_x.length && crop_y.length && crop_w.length && crop_h.length))
+        return;
+      if (cropbox.length) cropbox.remove();
+      if (!file.type.match('image.*')) throw 'This is not an image';
+      var applyDimensions = function(coordinates) {
+        var realX = coordinates.x / ratio,
+            realY = coordinates.y / ratio,
+            realW = coordinates.w / ratio,
+            realH = coordinates.h / ratio;
+        crop_x.val(Math.round(realX));
+        crop_y.val(Math.round(realY));
+        crop_w.val(Math.round(realW));
+        crop_h.val(Math.round(realH));
+      };
+      cropbox = $('<div/>').addClass('cropbox').appendTo(form);
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var image = $('<img/>').
+          attr('src', e.target.result).appendTo(cropbox).
+          Jcrop({
+            onSelect: applyDimensions,
+            onChange: applyDimensions,
+            setSelect: [ 0, 0, width, width ],
+            aspectRatio: 1
+          });
+        imageRealWidth = image.width();
+        imageRealHeight = image.height();
+        var ratioWidth = 1,
+            ratioHeight = 1;
+        if (imageRealWidth > formPictureWidthLimit)
+          ratioWidth = formPictureWidthLimit / imageRealWidth;
+        if (imageRealHeight > formPictureHeightLimit)
+          ratioHeight = formPictureHeightLimit / imageRealHeight;
+        ratio = (ratioWidth > ratioHeight) ? ratioHeight : ratioWidth;
+        var imageFinalWidth = Math.round(ratio * imageRealWidth),
+            imageFinalHeight = Math.round(ratio * imageRealHeight);
+        image.css({
+          width: imageFinalWidth + 'px',
+          height: imageFinalHeight + 'px'
+        });
+        image.closest('form').
+          dialog('option', 'width', formDialogDefaultWidth + image.width() + 10);
+      };
+      reader.readAsDataURL(file);
+    });
+  })();
+// END IMAGE CROPPING
 // ADMIN TOOLTIP
   (function() {
     var methods = {
@@ -68,7 +134,8 @@ jQuery(function($) {
         form.dialog({
           title: $('h1:first', r),
           modal: true,
-          buttons: buttons
+          buttons: buttons,
+          width: formDialogDefaultWidth
         });
         $('form').ajaxForm(function(r) {
           var newForm = $('form:first', r);
@@ -118,8 +185,6 @@ jQuery(function($) {
           });
       });
   })();
-// END ADMIN TOOLTIP
-
   $('body').
     delegate(
       '[data-new-url], [data-edit-url], [data-delete-url]',
@@ -129,4 +194,5 @@ jQuery(function($) {
       '[data-new-url], [data-edit-url], [data-delete-url]',
       'mouseleave',
       function(e) { $(this).tooltip('off'); });
+// END ADMIN TOOLTIP
 });
