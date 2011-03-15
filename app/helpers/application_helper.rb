@@ -29,6 +29,22 @@ module ApplicationHelper
     end
   end
 
+  def achievement_section_tag(section, achievements)
+    options = { :id => 'achievements' }
+    if admin?
+      options['data-new-url'] = new_admin_achievement_path(:section => section)
+    end
+    content_tag(:div, options) do
+      unless achievements.nil?
+        content_tag(:ul, :id => 'subsections') do
+          achievements.group_by(&:subsection).map { |subsection|
+            achievement_subsection_tag(section, *subsection)
+          }.join("\n").html_safe
+        end
+      end
+    end
+  end
+
   def achievement_subsection_tag(section, subsection, achievements)
     content_tag(:li, :id => "subsection_#{subsection}") do
       options = { :class => 'achievements' }
