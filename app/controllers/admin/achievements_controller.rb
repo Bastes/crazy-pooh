@@ -3,8 +3,15 @@ class Admin::AchievementsController < Admin::ApplicationController
     @achievements = Achievement.all
   end
 
+  def show
+    @achievement = Achievement.find(params[:id])
+  end
+
   def new
-    @achievement = Achievement.new
+    @achievement = Achievement.new.tap do |achievement|
+      achievement.section = params[:section] if params[:section]
+      achievement.subsection = params[:subsection] if params[:subsection]
+    end
   end
 
   def edit
@@ -19,6 +26,7 @@ class Admin::AchievementsController < Admin::ApplicationController
       achievement.attributes = params[:achievement] }
     if @achievement.save
       flash[:notice] = t('notices.created', :model => @achievement.class.model_name.human)
+      redirect_to [:admin, @achievement]
     else
       render :action => :new, :status => :unprocessable_entity
     end

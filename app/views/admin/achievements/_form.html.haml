@@ -21,12 +21,12 @@
     - if @achievement.exhibit.file?
       - link_to @achievement.exhibit.url, :target => :_blank do
         = image_tag @achievement.exhibit.url(:thumbnail), :alt => @achievement.title
-    = errors_on @achievement, :exhibit
-  %div
-    = f.text_field :crop_x
-    = f.text_field :crop_y
-  %div
-    = f.text_field :crop_w
-    = f.text_field :crop_h
+    = errors_on @achievement, :exhibit_file_name
+    %div
+      = f.text_field :crop_x
+      = f.text_field :crop_y
+      %br
+      = f.text_field :crop_w
+      = f.text_field :crop_h
   %div
     = f.submit
