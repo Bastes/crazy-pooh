@@ -91,7 +91,7 @@ module ApplicationHelper
     options = { :id => 'external_links' }
     options['data-new-url'] = new_admin_external_link_path if admin?
     content_tag(:ul, options) do
-      @external_links.group_by(&:section).map { |section|
+      external_links.group_by(&:section).map { |section|
         external_link_section_tag(*section)
       }.join("\n").html_safe
     end.html_safe
