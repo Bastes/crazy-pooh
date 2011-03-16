@@ -78,7 +78,7 @@ jQuery(function($) {
               addClass('tooltip').
               css({
                 top: offset.top + 'px',
-                left: offset.left + this.width() + 'px' }).
+                left: offset.left + this.outerWidth() + 'px' }).
               data('target', this).
               mouseenter(function() { myself.tooltip('cancelOff'); }).
               mouseleave(function() { myself.tooltip('off'); });
