@@ -1,5 +1,17 @@
-#main #breadcrumb h1 {
+#main #breadcrumb.chiyogami h1 {
+  background-image: url(/images/portfolio_section_titles/chiyogami.jpg); }
+#main #breadcrumb.couleur_bd h1 {
+  background-image: url(/images/portfolio_section_titles/couleur_bd.jpg); }
+#main #breadcrumb.croquis h1 {
+  background-image: url(/images/portfolio_section_titles/croquis.jpg); }
+#main #breadcrumb.graphisme h1 {
+  background-image: url(/images/portfolio_section_titles/graphisme.jpg); }
+#main #breadcrumb.illustration h1 {
   background-image: url(/images/portfolio_section_titles/illustration.jpg); }
+#main #breadcrumb.liens h1 {
+  background-image: url(/images/portfolio_section_titles/liens.jpg); }
+#main #breadcrumb.photographie h1 {
+  background-image: url(/images/portfolio_section_titles/photographie.jpg); }
 #main #achievements {
   position: relative;
   width: 250px;
