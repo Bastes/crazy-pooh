@@ -86,4 +86,47 @@ module ApplicationHelper
       portfolio_section_path :section => section_or_achievement
     end
   end
+
+  def external_links_tag(external_links)
+    options = { :id => 'external_links' }
+    options['data-new-url'] = new_admin_external_link_path if admin?
+    content_tag(:ul, options) do
+      @external_links.group_by(&:section).map { |section|
+        external_link_section_tag(*section)
+      }.join("\n").html_safe
+    end.html_safe
+  end
+
+  def external_link_section_tag(section, external_links)
+    content_tag(:li, :id => "section_#{section}", :class => 'section') do
+      options = {}
+      if admin?
+        options['data-new-url'] = new_admin_external_link_path(
+          :section => section)
+      end
+      ( content_tag(:h2, "[#{section}]") + "\n" +
+        content_tag(:ul, options) do
+          external_links.map { |external_link|
+            external_link_tag(external_link)
+          }.join("\n").html_safe
+        end ).html_safe
+    end.html_safe
+  end
+
+  def external_link_tag(external_link)
+    options = {}
+    if admin?
+      options['data-edit-url'] = url_for([:edit, :admin, external_link])
+    end
+    content_tag(:li, options) do
+      link_to external_link.url, :title => external_link.description, :target => '_blank' do
+        ( h(external_link.label) +
+          if external_link.banner.file?
+            ( "\n" +
+              image_tag(external_link.banner.url, :alt => external_link.label)
+            ).html_safe
+          end ).html_safe
+      end
+    end
+  end
 end

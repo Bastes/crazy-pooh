@@ -1,0 +1,54 @@
+@import 'dimensions';
+#main {
+  background: {
+    image: url(/images/bandeverticale.jpg);
+    repeat: no-repeat;
+    position: 230px 0px;
+    color: transparent;
+  }
+  #breadcrumb h1 {
+    background-image: url(/images/portfolio_section_titles/liens.jpg);
+  }
+  #external_links {
+    $external_links_height: $main_height - 2 * $main_padding_height - 70px;
+    position: absolute;
+    left: $main_padding_width;
+    bottom: $main_padding_height;
+    width: $main_width - 2 * $main_padding_width;
+    height: $external_links_height;
+    &,
+    ul {
+      list-style-type: none;
+      padding: 0px;
+      text-align: right;
+      * {
+        text-align: center;
+      }
+      li.section {
+        display: inline-block;
+        *display: inline; zoom: 1;
+        width: 210px;
+        height: $external_links_height;
+        &#section_Crazy-Pooh {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+        ul {
+          padding: 0px 30px;
+          width: 150px;
+          height: $external_links_height;
+          li {
+            a {
+              text-decoration: none;
+              img {
+                display: block;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
