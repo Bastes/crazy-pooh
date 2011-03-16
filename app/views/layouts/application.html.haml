@@ -14,7 +14,7 @@
       %div#header
         = link_to("CONTACT", "#FIXME", :id => 'contact_link')
       - unless (title_content = yield(:title)).blank?
-        %div#breadcrumb
+        %div#breadcrumb{ :class => yield(:section) }
           %h1
             %span= title_content
           = link_to(t(".header.back"), root_path)
