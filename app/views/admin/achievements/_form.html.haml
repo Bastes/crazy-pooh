@@ -19,7 +19,7 @@
     = f.label :exhibit
     = f.file_field :exhibit
     - if @achievement.exhibit.file?
-      - link_to @achievement.exhibit.url, :target => :_blank, :class => 'thumbnail' do
+      = link_to @achievement.exhibit.url, :target => :_blank, :class => 'thumbnail' do
         = image_tag @achievement.exhibit.url(:thumbnail), :alt => @achievement.title
     = errors_on @achievement, :exhibit_file_name
     %div.cropping_data

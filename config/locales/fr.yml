@@ -64,7 +64,7 @@ fr:
       user: "utilisateur"
       static_content: "contenu fixe"
       external_link: "lien externe"
-      achievement: "réalisations"
+      achievement: "réalisation"
     attributes:
       user:
         login: "nom d'utilisateur"

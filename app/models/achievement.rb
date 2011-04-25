@@ -5,7 +5,7 @@ class Achievement < ActiveRecord::Base
                     :storage => :s3,
                     :s3_credentials => S3_CREDENTIALS,
                     :url => ':s3_domain_url',
-                    :path => ":attachment/:style-:id-:basename.:extension",
+                    :path => "achievements/:style-:id-:basename.:extension",
                     :styles => {
                       :showcase => [ '390x555>', 'png' ],
                       :thumbnail => {

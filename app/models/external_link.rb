@@ -5,7 +5,7 @@ class ExternalLink < ActiveRecord::Base
                     :storage => :s3,
                     :s3_credentials => S3_CREDENTIALS,
                     :url => ':s3_domain_url',
-                    :path => ":attachment/:id_:basename.:extension",
+                    :path => "external_links/:id_:basename.:extension",
                     :styles => {
                       :original => {
                         :geometry => "150x",

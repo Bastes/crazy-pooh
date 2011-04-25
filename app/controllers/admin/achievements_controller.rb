@@ -36,7 +36,7 @@ class Admin::AchievementsController < Admin::ApplicationController
     @achievement = Achievement.find(params[:id])
     if @achievement.update_attributes(params[:achievement])
       flash[:notice] = t('notices.updated', :model => @achievement.class.model_name.human)
-      redirect_to :action => :edit
+      redirect_to [:admin, @achievement]
     else
       render :action => :edit, :status => :unprocessable_entity
     end
