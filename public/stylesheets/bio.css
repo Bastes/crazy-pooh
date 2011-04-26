@@ -1,0 +1,34 @@
+#main {
+  background-image: url(/images/bandeverticale.jpg);
+  background-repeat: no-repeat;
+  background-position: 230px 0px;
+  background-color: transparent; }
+
+#main #breadcrumb h1 {
+  background-image: url("/images/portfolio_section_titles/bio.jpg"); }
+#main #content {
+  position: relative; }
+  #main #content #right_column {
+    width: 200px;
+    padding-top: 20px;
+    text-align: center; }
+    #main #content #right_column #resumes_frame {
+      margin-top: 20px; }
+      #main #content #right_column #resumes_frame #resumes {
+        list-style-type: none;
+        padding: 0px; }
+  #main #content #bibliography {
+    padding-top: 20px;
+    position: absolute;
+    width: 400px;
+    top: 00px;
+    right: 10px; }
+    #main #content #bibliography #columns {
+      position: relative; }
+      #main #content #bibliography #columns #bibliography_column_1,
+      #main #content #bibliography #columns #bibliography_column_2 {
+        width: 195px; }
+      #main #content #bibliography #columns #bibliography_column_2 {
+        position: absolute;
+        top: 0px;
+        right: 0px; }

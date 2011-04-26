@@ -15,9 +15,10 @@
         'illustration',
         'graphisme',
         'chiyogami',
-        'croquis',
-        'bio_et_cv' ].each do |section|
+        'croquis' ].each do |section|
       = link_to(portfolio_path(section), :id => "to_#{section}") do
         %span= t(".links.#{section}")
+    = link_to(bio_path, :id => "to_bio_et_cv") do
+      %span= t(".links.bio_et_cv")
     = link_to(external_links_path, :id => "to_liens") do
       %span= t(".links.liens")

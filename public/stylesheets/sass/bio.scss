@@ -1,0 +1,43 @@
+@import 'dimensions';
+@import 'bandeverticale';
+#main {
+  #breadcrumb {
+    h1 {
+      background-image: url('/images/portfolio_section_titles/bio.jpg')
+    }
+  }
+  #content {
+    position: relative;
+    #right_column {
+      width: 200px;
+      padding-top: 20px;
+      text-align: center;
+      #resumes_frame {
+        margin-top: 20px;
+        #resumes {
+          list-style-type: none;
+          padding: 0px;
+        }
+      }
+    }
+    #bibliography {
+      padding-top: 20px;
+      position: absolute;
+      width: 400px;
+      top: 00px;
+      right: 10px;
+      #columns {
+        position: relative;
+        #bibliography_column_1,
+        #bibliography_column_2 {
+          width: 195px;
+        }
+        #bibliography_column_2 {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+        }
+      }
+    }
+  }
+}

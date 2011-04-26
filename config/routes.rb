@@ -17,6 +17,7 @@ PortfolioViny::Application.routes.draw do
   match 'portfolio/:section/:subsection/:title' => 'portfolio#show',
     :as => :portfolio_achievement
   match 'links' => 'external_links#index', :as => :external_links
+  match 'bio' => 'bio#index', :as => :bio
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

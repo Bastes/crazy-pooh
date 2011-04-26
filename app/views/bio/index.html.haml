@@ -1,0 +1,17 @@
+- title t('.title')
+- specific_includes do
+  = stylesheet_link_tag 'bio'
+%div#content
+  %div#right_column
+    %div#who_am_i
+      = static_content_tag("bio:who_am_i:title", :h2)
+      = static_content_tag("bio:who_am_i:content", :div)
+    %div#resumes_frame
+      = static_content_tag("bio:resumes:title", :h2)
+      = resumes_tag @resumes
+  %div#bibliography
+    = static_content_tag("bio:bibliography:title", :h2)
+    %div#columns
+      - (1..2).each do |n|
+        = static_content_tag("bio:bibliography:column_#{n}", :div,
+                             :id => "bibliography_column_#{n}")
