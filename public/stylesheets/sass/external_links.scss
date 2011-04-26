@@ -1,11 +1,6 @@
 @import 'dimensions';
+@import 'bandeverticale';
 #main {
-  background: {
-    image: url(/images/bandeverticale.jpg);
-    repeat: no-repeat;
-    position: 230px 0px;
-    color: transparent;
-  }
   #breadcrumb h1 {
     background-image: url(/images/portfolio_section_titles/liens.jpg);
   }

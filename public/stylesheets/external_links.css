@@ -1,45 +1,41 @@
-#main {
-  background-image: url(/images/bandeverticale.jpg);
-  background-repeat: no-repeat;
-  background-position: 230px 0px;
-  background-color: transparent; }
-  #main #breadcrumb h1 {
-    background-image: url(/images/portfolio_section_titles/liens.jpg); }
-  #main #external_links {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    width: 797px;
-    height: 473px; }
-    #main #external_links,
-    #main #external_links ul {
-      list-style-type: none;
-      padding: 0px;
-      text-align: right; }
-      #main #external_links *,
-      #main #external_links ul * {
-        text-align: center; }
-      #main #external_links li.section,
-      #main #external_links ul li.section {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        width: 210px;
+@import url(bandeverticale.css);
+#main #breadcrumb h1 {
+  background-image: url(/images/portfolio_section_titles/liens.jpg); }
+#main #external_links {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 797px;
+  height: 473px; }
+  #main #external_links,
+  #main #external_links ul {
+    list-style-type: none;
+    padding: 0px;
+    text-align: right; }
+    #main #external_links *,
+    #main #external_links ul * {
+      text-align: center; }
+    #main #external_links li.section,
+    #main #external_links ul li.section {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      width: 210px;
+      height: 473px; }
+      #main #external_links li.section#section_Crazy-Pooh,
+      #main #external_links ul li.section#section_Crazy-Pooh {
+        position: absolute;
+        left: 0px;
+        top: 0px; }
+      #main #external_links li.section ul,
+      #main #external_links ul li.section ul {
+        padding: 0px 30px;
+        width: 150px;
         height: 473px; }
-        #main #external_links li.section#section_Crazy-Pooh,
-        #main #external_links ul li.section#section_Crazy-Pooh {
-          position: absolute;
-          left: 0px;
-          top: 0px; }
-        #main #external_links li.section ul,
-        #main #external_links ul li.section ul {
-          padding: 0px 30px;
-          width: 150px;
-          height: 473px; }
-          #main #external_links li.section ul li a,
-          #main #external_links ul li.section ul li a {
-            text-decoration: none; }
-            #main #external_links li.section ul li a img,
-            #main #external_links ul li.section ul li a img {
-              display: block;
-              border: none; }
+        #main #external_links li.section ul li a,
+        #main #external_links ul li.section ul li a {
+          text-decoration: none; }
+          #main #external_links li.section ul li a img,
+          #main #external_links ul li.section ul li a img {
+            display: block;
+            border: none; }
