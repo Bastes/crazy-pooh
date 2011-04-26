@@ -1,0 +1,13 @@
+= form_for [:admin, @resume], :html => { :multipart => true } do |f|
+  %div
+    = f.label :label
+    = f.text_field :label
+    = errors_on @resume, :label
+  %div
+    = f.label :exhibit
+    = f.file_field :exhibit
+    - if @resume.exhibit.file?
+      = link_to @resume.label, @resume.exhibit.url, :target => :_blank
+    = errors_on @resume, :exhibit_file_name
+  %div
+    = f.submit

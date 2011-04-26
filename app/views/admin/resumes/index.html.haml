@@ -1,0 +1,7 @@
+- title t('.title')
+%ul
+  - @resumes.each do |resume|
+    %li
+      = link_to resume.label, [:edit, :admin, resume]
+= link_to t('links.new', :model => Resume.model_name.human),
+          new_admin_resume_path

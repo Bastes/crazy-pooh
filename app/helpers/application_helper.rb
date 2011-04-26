@@ -129,4 +129,18 @@ module ApplicationHelper
       end
     end
   end
+
+  def resumes_tag(resumes)
+    options = { :id => 'resumes' }
+    options['data-new-url'] = new_admin_resume_path if admin?
+    content_tag(:ul, options) do
+      resumes.map { |resume| resume_tag(resume) }.join("\n").html_safe
+    end.html_safe
+  end
+
+  def resume_tag(resume)
+    options = {}
+    options['data-edit-url'] = url_for([:edit, :admin, resume]) if admin?
+    link_to(resume.label, resume.exhibit.url, options)
+  end
 end

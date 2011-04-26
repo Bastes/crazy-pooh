@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303161923) do
+ActiveRecord::Schema.define(:version => 20110316140239) do
 
   create_table "achievements", :force => true do |t|
     t.string   "section"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(:version => 20110303161923) do
 
   add_index "external_links", ["rank"], :name => "index_external_links_on_rank"
   add_index "external_links", ["section"], :name => "index_external_links_on_section"
+
+  create_table "resumes", :force => true do |t|
+    t.string   "label"
+    t.string   "exhibit_file_name"
+    t.string   "exhibit_content_type"
+    t.integer  "exhibit_file_size"
+    t.datetime "exhibit_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false

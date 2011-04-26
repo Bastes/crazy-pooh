@@ -9,6 +9,7 @@ PortfolioViny::Application.routes.draw do
     resources :static_contents, :only => [:index, :show, :edit, :update]
     resources :external_links
     resources :achievements
+    resources :resumes
   end
 
   root :to => 'home#index'

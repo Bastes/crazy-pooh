@@ -53,6 +53,13 @@ fr:
         title: "Créer une nouvelle réalisation"
       edit:
         title: "Editer la réalisation"
+    resumes:
+      index:
+        title: "Tous les curriculum vitaes"
+      new:
+        title: "Créer un curriculum vitae"
+      edit:
+        title: "Editer le curriculum vitae"
   helpers:
     submit:
       create: "Créer ce(tte) %{model}"
@@ -65,6 +72,7 @@ fr:
       static_content: "contenu fixe"
       external_link: "lien externe"
       achievement: "réalisation"
+      resume: "curriculum vitae"
     attributes:
       user:
         login: "nom d'utilisateur"
@@ -85,6 +93,9 @@ fr:
         title: "titre"
         description: "description"
         exhibit: "exemple"
+      resume:
+        label: "étiquette"
+        exhibit: "fichier"
   activemodel:
     models:
       user_session: "session"

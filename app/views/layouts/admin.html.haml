@@ -12,6 +12,7 @@
             = link_to StaticContent.model_name.human, admin_static_contents_path
             = link_to ExternalLink.model_name.human, admin_external_links_path
             = link_to Achievement.model_name.human, admin_achievements_path
+            = link_to Resume.model_name.human, admin_resumes_path
           = link_to t('.header.logged_as', :login => user.login), edit_admin_user_path
           = link_to t('.header.logout'), admin_logout_path
         - else
