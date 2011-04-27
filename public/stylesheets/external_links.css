@@ -1,6 +1,11 @@
-@import url(bandeverticale.css);
+#main {
+  background-image: url(/images/bandeverticale.jpg);
+  background-repeat: no-repeat;
+  background-position: 230px 0px;
+  background-color: transparent; }
+
 #main #breadcrumb h1 {
-  background-image: url(/images/portfolio_section_titles/liens.jpg); }
+  background-image: url(/images/portfolio_section_titles/liens.png); }
 #main #external_links {
   position: absolute;
   left: 10px;
