@@ -141,6 +141,8 @@ module ApplicationHelper
   def resume_tag(resume)
     options = {}
     options['data-edit-url'] = url_for([:edit, :admin, resume]) if admin?
-    link_to(resume.label, resume.exhibit.url, options)
+    content_tag(:li) do
+      link_to(resume.label, resume.exhibit.url, options)
+    end.html_safe
   end
 end
