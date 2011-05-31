@@ -78,6 +78,7 @@ GEM
     rake (0.9.0)
     rest-client (1.6.1)
       mime-types (>= 1.16)
+    sass (3.1.2)
     sendgrid (0.2.0)
       json
       json
@@ -110,6 +111,7 @@ DEPENDENCIES
   mail
   paperclip
   rails (= 3.0.3)
+  sass
   sendgrid
   sqlite3-ruby
   taps

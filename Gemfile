@@ -12,6 +12,7 @@ end
 
 # views and stylesheets use haml
 gem 'haml'
+gem 'sass'
 gem 'sendgrid'
 
 # use paperclip for file storage over amazon S3
