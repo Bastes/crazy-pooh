@@ -14,7 +14,7 @@ SMTP_SETTINGS =
     }
   else
     # get credentials from YML file
-    YAML::load(File.open(email_file))[Rails.env]
+    YAML.load_file(email_file)[Rails.env]
   end
 
 ActionMailer::Base.delivery_method = :smtp
