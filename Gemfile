@@ -12,10 +12,14 @@ end
 
 # views and stylesheets use haml
 gem 'haml'
+gem 'sendgrid'
 
 # use paperclip for file storage over amazon S3
 gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
+
+# send mails
+gem "mail"
 
 # deploy with heroku
 gem 'heroku'

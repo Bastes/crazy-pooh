@@ -1,0 +1,14 @@
+common: &common
+  address:              "smtp.sendgrid.net"
+  port:                 587
+  authentication:       "plain"
+  user_name:            "your.user@server.com"
+  password:             "yourpas$w0rd"
+  domain:               "yourdomain.com"
+  enable_starttls_auto: true
+
+development:
+  <<: *common
+
+production:
+  <<: *common
