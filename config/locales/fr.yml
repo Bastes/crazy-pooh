@@ -10,6 +10,7 @@ fr:
     application:
       header:
         back: "<< retour"
+        contact: "CONTACT"
     admin:
       header:
         login: "Connexion"
@@ -27,6 +28,15 @@ fr:
         :croquis: "Croquis"
         :liens: "Liens"
         :bio_et_cv: "Bio et CV"
+  bio:
+    index:
+      title: "Bio"
+  contacts:
+    index:
+      title: "Contact"
+  contact_mailer:
+    contact_request:
+      subject: "Demande de contact de la part de %{first_name} %{last_name} <%{email}>"
   admin:
     user:
       edit:
@@ -73,6 +83,7 @@ fr:
       external_link: "lien externe"
       achievement: "réalisation"
       resume: "curriculum vitae"
+      contact: "demande de contact"
     attributes:
       user:
         login: "nom d'utilisateur"
@@ -96,6 +107,20 @@ fr:
       resume:
         label: "étiquette"
         exhibit: "fichier"
+      contact:
+        first_name: "prénom"
+        last_name: "nom"
+        company: "société"
+        phone: "numéro de téléphone"
+        email: "addresse email"
+        reason: "raison de votre demande"
+        created_at: "envoyée le"
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              invalid: "n'est pas une addresse email correcte"
   activemodel:
     models:
       user_session: "session"

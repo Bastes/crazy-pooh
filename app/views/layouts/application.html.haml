@@ -12,7 +12,7 @@
   %body
     %div#main
       %div#header
-        = link_to("CONTACT", "#FIXME", :id => 'contact_link')
+        = link_to(t(".header.contact"), contacts_path, :id => 'contact_link')
       - unless (title_content = yield(:title)).blank?
         %div#breadcrumb{ :class => yield(:section) }
           %h1

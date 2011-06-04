@@ -1,0 +1,7 @@
+development:
+  send_from: "someone@example.com"
+  send_to: "someone@example.com"
+
+production:
+  send_from: "someone@example.com"
+  send_to: "someone@example.com"

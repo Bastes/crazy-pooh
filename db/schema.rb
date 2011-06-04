@@ -13,20 +13,20 @@
 ActiveRecord::Schema.define(:version => 20110531184549) do
 
   create_table "achievements", :force => true do |t|
-    t.string    "section"
-    t.string    "subsection"
-    t.string    "title"
-    t.text      "description"
-    t.string    "exhibit_file_name"
-    t.string    "exhibit_content_type"
-    t.integer   "exhibit_file_size"
-    t.timestamp "exhibit_updated_at"
-    t.integer   "crop_x"
-    t.integer   "crop_y"
-    t.integer   "crop_w"
-    t.integer   "crop_h"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "section"
+    t.string   "subsection"
+    t.string   "title"
+    t.text     "description"
+    t.string   "exhibit_file_name"
+    t.string   "exhibit_content_type"
+    t.integer  "exhibit_file_size"
+    t.datetime "exhibit_updated_at"
+    t.integer  "crop_x"
+    t.integer  "crop_y"
+    t.integer  "crop_w"
+    t.integer  "crop_h"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "achievements", ["created_at"], :name => "index_achievements_on_created_at"
@@ -45,37 +45,37 @@ ActiveRecord::Schema.define(:version => 20110531184549) do
   end
 
   create_table "external_links", :force => true do |t|
-    t.string    "section"
-    t.integer   "rank"
-    t.string    "label"
-    t.text      "description"
-    t.text      "url"
-    t.string    "banner_file_name"
-    t.string    "banner_content_type"
-    t.integer   "banner_file_size"
-    t.timestamp "banner_updated_at"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "section"
+    t.integer  "rank"
+    t.string   "label"
+    t.text     "description"
+    t.text     "url"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "external_links", ["rank"], :name => "index_external_links_on_rank"
   add_index "external_links", ["section"], :name => "index_external_links_on_section"
 
   create_table "resumes", :force => true do |t|
-    t.string    "label"
-    t.string    "exhibit_file_name"
-    t.string    "exhibit_content_type"
-    t.integer   "exhibit_file_size"
-    t.timestamp "exhibit_updated_at"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "label"
+    t.string   "exhibit_file_name"
+    t.string   "exhibit_content_type"
+    t.integer  "exhibit_file_size"
+    t.datetime "exhibit_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sessions", :force => true do |t|
-    t.string    "session_id", :null => false
-    t.text      "data"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
@@ -89,10 +89,10 @@ ActiveRecord::Schema.define(:version => 20110531184549) do
   add_index "static_contents", ["codename"], :name => "index_static_contents_on_codename"
 
   create_table "users", :force => true do |t|
-    t.string    "login"
-    t.string    "password"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "login"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

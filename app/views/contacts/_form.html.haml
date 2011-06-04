@@ -1,0 +1,27 @@
+- form_for @contact do |f|
+  %div
+    = f.label :first_name
+    = f.text_field :first_name
+    = errors_on @contact, :first_name
+  %div
+    = f.label :last_name
+    = f.text_field :last_name
+    = errors_on @contact, :last_name
+  %div
+    = f.label :company
+    = f.text_field :company
+    = errors_on @contact, :company
+  %div
+    = f.label :phone
+    = f.text_field :phone
+    = errors_on @contact, :phone
+  %div
+    = f.label :email
+    = f.text_field :email
+    = errors_on @contact, :email
+  %div
+    = f.label :reason
+    = f.text_area :reason
+    = errors_on @contact, :reason
+  %div
+    = f.submit

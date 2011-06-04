@@ -1,0 +1,6 @@
+- title t('.title')
+- specific_includes do
+  = javascript_tag 'contacts'
+%div#content
+  = static_content_tag("contacts:explainations", :div)
+  = render :partial => 'form'

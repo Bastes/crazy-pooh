@@ -1,0 +1,24 @@
+%h1 Nouveau contact :
+%ul
+  %li
+    = t('activerecord.attributes.contact.created_at')
+    %strong= l(@contact.created_at)
+  %li
+    = t('activerecord.attributes.contact.first_name')
+    %strong= @contact.first_name
+  %li
+    = t('activerecord.attributes.contact.last_name')
+    %strong= @contact.last_name
+  %li
+    = t('activerecord.attributes.contact.company')
+    %strong= @contact.company
+  %li
+    = t('activerecord.attributes.contact.phone')
+    %strong= @contact.phone
+  %li
+    = t('activerecord.attributes.contact.email')
+    %strong
+      %a{ href: "mailto:#{@contact.email}" }= @contact.email
+  %li
+    = t('activerecord.attributes.contact.reason')
+    %div= @contact.reason
