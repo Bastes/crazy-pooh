@@ -15,6 +15,6 @@ module ContactMailerConfiguration
   def self.included(base)
     Rails.logger.debug "SEND_FROM: " + SEND_FROM
     Rails.logger.debug "SEND_TO: " + SEND_TO
-    base.default :sender => SEND_FROM, :to => SEND_TO
+    base.default :from => SEND_FROM, :sender => SEND_FROM, :to => SEND_TO
   end
 end
