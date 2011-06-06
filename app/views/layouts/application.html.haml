@@ -4,6 +4,7 @@
     %title Crazy-Pooh
     = render :partial => 'layouts/common_includes'
     = stylesheet_link_tag 'front'
+    = javascript_include_tag 'application'
     - if admin?
       = stylesheet_link_tag 'admin'
       = javascript_include_tag 'admin'
@@ -12,6 +13,11 @@
   %body
     %div#main
       %div#header
+        %div#session
+          - if admin?
+            = link_to t('layouts.admin.header.logout'), admin_logout_path, :id => 'logout_link'
+          - else
+            = render :partial => 'admin/user_session/form'
         = link_to(t(".header.contact"), contacts_path, :id => 'contact_link')
       - unless (title_content = yield(:title)).blank?
         %div#breadcrumb{ :class => yield(:section) }

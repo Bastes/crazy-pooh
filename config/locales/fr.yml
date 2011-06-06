@@ -76,6 +76,16 @@ fr:
       update: "Mettre à jour ce(tte) %{model}"
       user_session:
         create: "Connexion"
+      contact:
+        create: "Envoyer"
+    label:
+      contact:
+        first_name: "Prénom*"
+        last_name: "Nom*"
+        company: "Société"
+        phone: "Téléphone"
+        email: "Mail*"
+        reason: "Raison de votre prise de contact*"
   activerecord:
     models:
       user: "utilisateur"
@@ -111,9 +121,9 @@ fr:
         first_name: "prénom"
         last_name: "nom"
         company: "société"
-        phone: "numéro de téléphone"
-        email: "addresse email"
-        reason: "raison de votre demande"
+        phone: "téléphone"
+        email: "mail"
+        reason: "raison de la prise de contact"
         created_at: "envoyée le"
     errors:
       models:

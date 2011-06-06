@@ -1,6 +1,8 @@
 - title t('.title')
 - specific_includes do
-  = javascript_tag 'contacts'
+  = javascript_include_tag 'contacts'
+  = stylesheet_link_tag 'contacts'
 %div#content
-  = static_content_tag("contacts:explainations", :div)
-  = render :partial => 'form'
+  %div#right_column
+    = static_content_tag("contacts:explainations", :div, :id => 'explainations')
+    = render :partial => 'form'

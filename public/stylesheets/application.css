@@ -18,3 +18,22 @@ form .field_with_errors {
 form .error {
   display: inline;
   color: red; }
+
+#session {
+  position: absolute;
+  top: 0px;
+  right: 100%;
+  width: 200px;
+  height: 100px;
+  margin-right: 20px; }
+  #session:hover form {
+    display: block; }
+  #session:hover a {
+    display: inline; }
+  #session form {
+    display: none;
+    width: 200px;
+    height: 100px;
+    padding: 0px; }
+  #session a {
+    display: none; }

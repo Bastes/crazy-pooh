@@ -1,0 +1,66 @@
+@import 'dimensions';
+@import 'bandeverticale';
+#content {
+  #right_column {
+    position: absolute;
+    top: 50px;
+    left: 420px;
+    width: 350px;
+    height: 500px;
+
+    #explainations {
+      text-align: center;
+    }
+
+    form#new_contact {
+      position: absolute;
+      bottom: 0px;
+      &.disabled .submit input {
+        background-position: bottom center;
+      }
+
+      label, input {
+        display: inline-block;
+        *display: inline; zoom: 1;
+      }
+      label {
+        width: 60px;
+      }
+      input {
+        width: 270px;
+      }
+      
+      .textarea {
+        label {
+          display: block;
+          width: auto;
+        }
+        textarea {
+          width: 330px;
+          height: 150px;
+        }
+      }
+
+      .submit {
+        text-align: center;
+        input {
+          display: inline-block;
+          *display: inline; zoom: 1;
+          width: 62px;
+          height: 26px;
+          padding: 0px;
+          text-indent: 1000px;
+          overflow: hidden;
+          border: none;
+          background: {
+            color: transparent;
+            repeat: no-repeat;
+            position: top center;
+            image: url(/images/bouton-envoyer.png);
+          }
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

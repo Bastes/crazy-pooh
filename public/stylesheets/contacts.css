@@ -1,0 +1,50 @@
+#main {
+  background-image: url(/images/bandeverticale.jpg);
+  background-repeat: no-repeat;
+  background-position: 230px 0px;
+  background-color: transparent; }
+
+#content #right_column {
+  position: absolute;
+  top: 50px;
+  left: 420px;
+  width: 350px;
+  height: 500px; }
+  #content #right_column #explainations {
+    text-align: center; }
+  #content #right_column form#new_contact {
+    position: absolute;
+    bottom: 0px; }
+    #content #right_column form#new_contact.disabled .submit input {
+      background-position: bottom center; }
+    #content #right_column form#new_contact label, #content #right_column form#new_contact input {
+      display: inline-block;
+      *display: inline;
+      zoom: 1; }
+    #content #right_column form#new_contact label {
+      width: 60px; }
+    #content #right_column form#new_contact input {
+      width: 270px; }
+    #content #right_column form#new_contact .textarea label {
+      display: block;
+      width: auto; }
+    #content #right_column form#new_contact .textarea textarea {
+      width: 330px;
+      height: 150px; }
+    #content #right_column form#new_contact .submit {
+      text-align: center; }
+      #content #right_column form#new_contact .submit input {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        width: 62px;
+        height: 26px;
+        padding: 0px;
+        text-indent: 1000px;
+        overflow: hidden;
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-image: url(/images/bouton-envoyer.png);
+        cursor: pointer; }

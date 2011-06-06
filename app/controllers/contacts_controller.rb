@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
       ContactMailer.contact_request(@contact).deliver
       redirect_to :action => :index
     else
-      render :action => :new
+      render :action => :new, :status => 400
     end
   end
 
