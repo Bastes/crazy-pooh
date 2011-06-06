@@ -11,6 +11,15 @@ fr:
       header:
         back: "<< retour"
         contact: "CONTACT"
+      footer:
+        copyright: "2010©Toute reproduction interdite"
+        credits:
+          design: "Design : %{name}"
+          integration: "Integration : %{name}"
+          code: "Code : %{name}"
+        sitemap: "Plan"
+        contact: "Contact"
+        optimized: "Site optimisé en 1024 x 768"
     admin:
       header:
         login: "Connexion"
