@@ -18,6 +18,7 @@ PortfolioViny::Application.routes.draw do
     :as => :portfolio_achievement
   match 'links' => 'external_links#index', :as => :external_links
   match 'bio' => 'bio#index', :as => :bio
+  match 'sitemap' => 'sitemap#show', :as => :sitemap
   resources :contacts, :only => [:index, :create]
 
   # The priority is based upon order of creation:

@@ -1,0 +1,25 @@
+#main {
+  background-image: url(/images/bandeverticale.jpg);
+  background-repeat: no-repeat;
+  background-position: 230px 0px;
+  background-color: transparent; }
+
+#content #right_column {
+  position: absolute;
+  top: 50px;
+  left: 420px;
+  width: 350px;
+  height: 500px; }
+  #content #right_column ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; }
+    #content #right_column ul li {
+      margin-bottom: 10px; }
+      #content #right_column ul li h2 {
+        margin: 0px;
+        padding: 0px; }
+      #content #right_column ul li a {
+        text-decoration: none; }
+      #content #right_column ul li ul li {
+        margin: 0px; }

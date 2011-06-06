@@ -43,6 +43,14 @@ fr:
   contacts:
     index:
       title: "Contact"
+  external_links:
+    index:
+      title: "Liens"
+  sitemap:
+    show:
+      title: "Plan du site"
+      pages:
+        home: "Accueil"
   contact_mailer:
     contact_request:
       subject: "Demande de contact de la part de %{first_name} %{last_name} <%{email}>"

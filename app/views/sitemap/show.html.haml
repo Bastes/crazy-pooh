@@ -1,0 +1,29 @@
+- title t('.title')
+- specific_includes do
+  = stylesheet_link_tag 'sitemap'
+%div#content
+  %div#right_column
+    %ul
+      %li
+        %h2= link_to t('.pages.home').capitalize, root_url
+      %li
+        %h2= link_to t('bio.index.title').capitalize, bio_url
+        %ul
+          = static_content_tag("bio:who_am_i:title", :li)
+          = static_content_tag("bio:resumes:title", :li)
+          = static_content_tag("bio:bibliography:title", :li)
+      %li
+        %h2= link_to t('external_links.index.title').capitalize, external_links_url
+        %ul
+          - @external_links_sections.each do |section|
+            %li= section
+      - @achievements_sections.each do |section, subsections|
+        %li
+          %h2= link_to t("home.index.links.#{section}"), portfolio_path(section), :id => "to_#{section}"
+          %ul
+            -subsections.each do |subsection|
+              %li= subsection
+      %li
+        %h2= link_to t('contacts.index.title').capitalize, contacts_url
+      %li
+        %h2= link_to t('.title').capitalize, sitemap_url

@@ -1,0 +1,29 @@
+@import 'dimensions';
+@import 'bandeverticale';
+#content {
+  #right_column {
+    position: absolute;
+    top: 50px;
+    left: 420px;
+    width: 350px;
+    height: 500px;
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        margin-bottom: 10px;
+        h2 {
+          margin: 0px;
+          padding: 0px;
+        }
+        a {
+          text-decoration: none;
+        }
+        ul li {
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
