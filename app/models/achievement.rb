@@ -20,8 +20,9 @@ class Achievement < ActiveRecord::Base
   validates_attachment_size :exhibit,
     :less_than => 2.megabytes
 
-  validate :section, :presence => true
-  validate :title, :presence => true
+  [:section, :subsection, :title].each { |field|
+    validates field, :presence => true, :format => %r{\A[^/]*\Z}
+  }
 
   after_update :reprocess_exhibit, :if => :cropping?
 
