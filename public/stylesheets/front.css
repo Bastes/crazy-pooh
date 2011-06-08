@@ -30,6 +30,8 @@
     background-position: 0px 0px; }
     #main #breadcrumb h1 span {
       display: none; }
+  #main #breadcrumb a {
+    font-size: 12px; }
   #main #footer {
     position: absolute;
     top: 100%;
