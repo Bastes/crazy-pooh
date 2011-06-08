@@ -1,5 +1,5 @@
 class Achievement < ActiveRecord::Base
-  default_scope :order => 'section ASC, subsection DESC, created_at DESC'
+  default_scope :order => 'section ASC, subsection ASC, created_at DESC'
 
   has_attached_file :exhibit,
                     :storage => :s3,
