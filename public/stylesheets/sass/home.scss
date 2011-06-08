@@ -3,7 +3,7 @@
   #right-column {
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 24px;
     height: $main_height - 20px;
     width: 160px;
     text-align: justify;
@@ -33,12 +33,12 @@
       }
       .left_bracket {
         background-image: url(/images/crochet_gauche.jpg);
-        left: -8px;
+        left: -12px;
         top: 0px;
       }
       .right_bracket {
         background-image: url(/images/crochet_droit.jpg);
-        right: -8px;
+        right: -12px;
         bottom: 0px;
       }
     }

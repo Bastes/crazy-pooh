@@ -1,7 +1,7 @@
 #main #right-column {
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 24px;
   height: 543px;
   width: 160px;
   text-align: justify; }
@@ -26,11 +26,11 @@
       height: 28px; }
     #main #right-column #welcome .left_bracket {
       background-image: url(/images/crochet_gauche.jpg);
-      left: -8px;
+      left: -12px;
       top: 0px; }
     #main #right-column #welcome .right_bracket {
       background-image: url(/images/crochet_droit.jpg);
-      right: -8px;
+      right: -12px;
       bottom: 0px; }
   #main #right-column #intellectual_property {
     position: absolute;
