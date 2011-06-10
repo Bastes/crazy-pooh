@@ -21,7 +21,7 @@ class Achievement < ActiveRecord::Base
     :less_than => 2.megabytes
 
   [:section, :subsection, :title].each { |field|
-    validates field, :presence => true, :format => %r{\A[^/]*\Z}
+    validates field, :presence => true, :format => %r{\A[^/\.]*\Z}
   }
 
   after_update :reprocess_exhibit, :if => :cropping?
