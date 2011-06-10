@@ -6,5 +6,4 @@
 %div#achievement
   - unless @achievement.nil?
     %div#description= @achievement.description.html_safe
-    - link_to @achievement.exhibit.url(:original), :id => 'exhibit', :target => '_blank' do
-      = image_tag @achievement.exhibit.url(:showcase), :alt => @achievement.title
+    = image_tag @achievement.exhibit.url(:showcase), :id => 'exhibit', :alt => @achievement.title
