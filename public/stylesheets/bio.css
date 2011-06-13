@@ -16,7 +16,8 @@
       margin-top: 20px; }
       #main #content #right_column #resumes_frame #resumes {
         list-style-type: none;
-        padding: 0px; }
+        padding: 0px;
+        min-height: 30px; }
   #main #content #bibliography {
     padding-top: 20px;
     position: absolute;
