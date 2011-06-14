@@ -82,6 +82,7 @@ jQuery(function($) {
               data('target', this).
               mouseenter(function() { myself.tooltip('cancelOff'); }).
               mouseleave(function() { myself.tooltip('off'); });
+        myself.addClass('hovered');
         $(['new', 'edit', 'delete']).each(function() {
           var verb = '' + this;
           if (myself.is('[data-' + verb + '-url]'))
@@ -96,6 +97,7 @@ jQuery(function($) {
       off: function() {
         this.tooltip('cancelOff');
         var myself = this;
+        myself.removeClass('hovered');
         this.data('tooltip-timeout',
           setTimeout(function() { myself.tooltip('remove') }, 1000));
         return this;

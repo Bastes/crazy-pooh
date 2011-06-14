@@ -1,3 +1,6 @@
+.hovered {
+  background-color: rgba(191, 191, 191, 0.25); }
+
 .tooltip {
   position: absolute;
   padding: 2px 6px;
