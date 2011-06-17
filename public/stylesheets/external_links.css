@@ -25,6 +25,7 @@
       display: inline-block;
       *display: inline;
       zoom: 1;
+      vertical-align: top;
       width: 210px;
       height: 473px; }
       #main #external_links li.section#section_CrazyPooh,

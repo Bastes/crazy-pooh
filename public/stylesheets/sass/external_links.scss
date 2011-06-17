@@ -22,6 +22,7 @@
       li.section {
         display: inline-block;
         *display: inline; zoom: 1;
+        vertical-align: top;
         width: 210px;
         height: $external_links_height;
         &#section_CrazyPooh {
