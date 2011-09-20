@@ -10,6 +10,11 @@ group :development, :test do
   gem 'taps'
 end
 
+group :production do
+  # forces the domain back to crazy-pooh.fr wherever the query originates from
+  gem 'rack-force_domain'
+end
+
 # views and stylesheets use haml
 gem 'haml'
 gem 'sass'
