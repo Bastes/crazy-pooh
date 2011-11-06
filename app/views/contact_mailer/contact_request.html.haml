@@ -18,7 +18,7 @@
   %li
     = t('activerecord.attributes.contact.email')
     %strong
-      %a{ href: "mailto:#{@contact.email}" }= @contact.email
+      %a(href="mailto:#{@contact.email}")= @contact.email
   %li
     = t('activerecord.attributes.contact.reason')
     %div= @contact.reason
