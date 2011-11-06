@@ -13,6 +13,8 @@
   width: 350px;
   height: 500px; }
   #main #content #right_column ul {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
     list-style-type: none;
     margin: 0px;
     padding: 0px; }
@@ -23,5 +25,8 @@
         padding: 0px; }
       #main #content #right_column ul li a {
         text-decoration: none; }
-      #main #content #right_column ul li ul li {
-        margin: 0px; }
+      #main #content #right_column ul li ul {
+        -moz-column-count: 1;
+        -webkit-column-count: 1; }
+        #main #content #right_column ul li ul li {
+          margin: 0px; }
