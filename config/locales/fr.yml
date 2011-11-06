@@ -19,7 +19,6 @@ fr:
           code: "Code : %{name}"
         sitemap: "Plan"
         contact: "Contact"
-        optimized: "Site optimisé en 1024 x 768"
     admin:
       header:
         login: "Connexion"
