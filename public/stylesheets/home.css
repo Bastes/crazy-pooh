@@ -49,7 +49,7 @@
   #main #links #to_graphisme,
   #main #links #to_illustration,
   #main #links #to_liens,
-  #main #links #to_photographie {
+  #main #links #to_inspirations {
     position: absolute;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -61,7 +61,7 @@
     #main #links #to_graphisme span,
     #main #links #to_illustration span,
     #main #links #to_liens span,
-    #main #links #to_photographie span {
+    #main #links #to_inspirations span {
       display: none; }
   #main #links #to_bio_et_cv {
     top: 0px;
@@ -105,9 +105,9 @@
     width: 76px;
     height: 50px;
     background-image: url(/images/home_links/liens.jpg); }
-  #main #links #to_photographie {
+  #main #links #to_inspirations {
     top: 105px;
     left: 0px;
     width: 68px;
     height: 133px;
-    background-image: url(/images/home_links/photographie.jpg); }
+    background-image: url(/images/home_links/inspirations.png); }

@@ -11,13 +11,14 @@
                        :id => 'intellectual_property')
   %div#links
     - [ 'couleur_bd',
-        'photographie',
         'illustration',
         'graphisme',
         'chiyogami',
         'croquis' ].each do |section|
       = link_to(portfolio_path(section), :id => "to_#{section}") do
         %span= t(".links.#{section}")
+    = link_to('https://plus.google.com/u/0/photos/109435610364015484658/albums', :id => 'to_inspirations') do
+      %span= t('.links.inspirations')
     = link_to(bio_path, :id => "to_bio_et_cv") do
       %span= t(".links.bio_et_cv")
     = link_to(external_links_path, :id => "to_liens") do

@@ -61,7 +61,7 @@
     #to_graphisme,
     #to_illustration,
     #to_liens,
-    #to_photographie {
+    #to_inspirations {
       position: absolute;
       background: {
         color: transparent;
@@ -121,12 +121,12 @@
       height: 50px;
       background-image:url(/images/home_links/liens.jpg);
     }
-    #to_photographie {
+    #to_inspirations {
       top: 105px;
       left: 0px;
       width: 68px;
       height: 133px;
-      background-image:url(/images/home_links/photographie.jpg);
+      background-image:url(/images/home_links/inspirations.png);
     }
   }
 }
