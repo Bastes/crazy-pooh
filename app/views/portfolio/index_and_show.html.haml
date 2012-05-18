@@ -5,5 +5,5 @@
 = achievement_section_tag(params[:section], @achievements)
 %div#achievement
   - unless @achievement.nil?
-    %div#description= @achievement.description.html_safe
+    %div#description= description_with_outer_links @achievement
     = image_tag @achievement.exhibit.url(:showcase), :id => 'exhibit', :alt => @achievement.title

@@ -11,4 +11,8 @@ module PortfolioHelper
       end
     }.compact.join(" / ").html_safe
   end
+
+  def description_with_outer_links achievement
+    achievement.description.gsub(/(<a[^>]*)(>)/) { |c| "#{c[0]} target=\"_blank\"#{c[1]}" }.html_safe
+  end
 end
