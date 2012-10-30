@@ -27,9 +27,6 @@ gem 'paperclip'
 # send mails
 gem "mail"
 
-# deploy with heroku
-gem 'heroku'
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
