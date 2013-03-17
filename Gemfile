@@ -8,6 +8,7 @@ gem 'rails', '3.0.20'
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
   gem 'taps'
+  gem 'heroku'
 end
 
 group :production do
