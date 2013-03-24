@@ -1,59 +1,32 @@
 @import 'dimensions';
 #main {
-  #right-column {
+  border: none;
+  background: {
+    image: url(/images/pixels.png);
+    position: center right;
+    repeat: no-repeat;
+    color: transparent;
+  }
+  #virginie_blancher {
+    display: block;
+    width: 133px;
+    height: 45px;
     position: absolute;
-    top: 10px;
-    left: 24px;
-    height: $main_height - 20px;
-    width: 160px;
-    text-align: justify;
-    #welcome_title {
-      width: 100%;
-      height: 11px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      background: {
-        image: url('/images/bienvenue.jpg');
-        color: transparent;
-        repeat: no-repeat;
-        position: center;
-      }
-      span {
-        display: none;
-      }
+    left: -133px;
+    top: 30px;
+    background: {
+      image: url(/images/virginie-blancher.png);
+      color: transparent;
+      position: center;
+      repeat: no-repeat;
     }
-    #welcome {
-      position: relative;
-      .left_bracket,
-      .right_bracket {
-        position: absolute;
-        display: block;
-        width: 6px;
-        height: 28px;
-      }
-      .left_bracket {
-        background-image: url(/images/crochet_gauche.jpg);
-        left: -12px;
-        top: 0px;
-      }
-      .right_bracket {
-        background-image: url(/images/crochet_droit.jpg);
-        right: -12px;
-        bottom: 0px;
-      }
-    }
-    #intellectual_property {
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
+    span {
+      display: none;
     }
   }
   #links {
-    position: absolute;
-    top: 125px;
-    left: 250px;
-    width: 300px;
-    height: 300px;
+    position: relative;
+    #to_contact,
     #to_bio_et_cv,
     #to_chiyogami,
     #to_couleur_bd,
@@ -63,6 +36,7 @@
     #to_liens,
     #to_inspirations {
       position: absolute;
+      display: block;
       background: {
         color: transparent;
         repeat: no-repeat;
@@ -72,61 +46,68 @@
         display: none;
       }
     }
+    #to_contact {
+      top: 130px;
+      left: 20px;
+      width: 107px;
+      height: 13px;
+      background-image:url(/images/home_links/me-contacter.png);
+    }
     #to_bio_et_cv {
-      top: 0px;
-      left: 170px;
-      width: 44px;
-      height: 163px;
-      background-image:url(/images/home_links/bio_et_cv.jpg);
+      top: 475px;
+      left: 270px;
+      width: 27px;
+      height: 47px;
+      background-image:url(/images/home_links/bio-et-cv.png);
     }
     #to_chiyogami {
-      bottom: 0px;
-      right: 0px;
-      width: 78px;
-      height: 241px;
-      background-image:url(/images/home_links/chiyogami.jpg);
+      top: 17px;
+      left: 155px;
+      width: 167px;
+      height: 90px;
+      background-image:url(/images/home_links/textile-et-papier-paint.png);
     }
     #to_couleur_bd {
-      top: 0px;
-      left: 0px;
-      width: 160px;
-      height: 94px;
-      background-image:url(/images/home_links/couleur_bd.jpg);
+      top: 317px;
+      left: 143px;
+      width: 230px;
+      height: 29px;
+      background-image:url(/images/home_links/couleur-bd.png);
     }
     #to_croquis {
-      top: 0px;
-      right: 0px;
-      width: 78px;
-      height: 53px;
-      background-image:url(/images/home_links/croquis.jpg);
+      top: 508px;
+      left: 10px;
+      width: 67px;
+      height: 13px;
+      background-image:url(/images/home_links/croquis.png);
     }
     #to_graphisme {
-      top: 170px;
-      left: 84px;
-      width: 129px;
-      height: 69px;
-      background-image:url(/images/home_links/graphisme.jpg);
+      top: 190px;
+      left: 10px;
+      width: 329px;
+      height: 47px;
+      background-image:url(/images/home_links/graphisme.png);
     }
     #to_illustration {
-      bottom: 0px;
-      left: 0px;
-      width: 206px;
-      height: 55px;
-      background-image:url(/images/home_links/illustration.jpg);
+      top: 450px;
+      left: -20px;
+      width: 94px;
+      height: 11px;
+      background-image:url(/images/home_links/illustrations.png);
     }
     #to_liens {
-      top: 105px;
-      left: 84px;
-      width: 76px;
-      height: 50px;
-      background-image:url(/images/home_links/liens.jpg);
+      top: 528px;
+      left: 70px;
+      width: 40px;
+      height: 12px;
+      background-image:url(/images/home_links/liens.png);
     }
     #to_inspirations {
-      top: 105px;
-      left: 0px;
-      width: 68px;
-      height: 133px;
-      background-image:url(/images/home_links/inspirations.png);
+      top: 470px;
+      left: 60px;
+      width: 100px;
+      height: 28px;
+      background-image:url(/images/home_links/inspirations-et-photos.png);
     }
   }
 }

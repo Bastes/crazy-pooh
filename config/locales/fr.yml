@@ -10,9 +10,8 @@ fr:
     application:
       header:
         back: "<< retour"
-        contact: "CONTACT"
       footer:
-        copyright: "2010©Toute reproduction interdite"
+        copyright: "%{year}©Toute reproduction interdite"
         credits:
           design: "Design : %{name}"
           integration: "Integration : %{name}"
@@ -28,6 +27,7 @@ fr:
     index:
       welcome: "Bienvenue"
       links:
+        :contact: "Me contacter"
         :couleur_bd: "Couleur BD"
         :inspirations: "Inspirations"
         :illustration: "Illustration"

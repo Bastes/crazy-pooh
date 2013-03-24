@@ -28,7 +28,6 @@
             = link_to t('layouts.admin.header.logout'), admin_logout_path, :id => 'logout_link'
           - else
             = render :partial => 'admin/user_session/form'
-        = link_to(t(".header.contact"), contacts_path, :id => 'contact_link')
       - unless (title_content = yield(:title)).blank?
         %div#breadcrumb{ :class => yield(:section) }
           %h1
@@ -38,10 +37,9 @@
 
       %div#footer
         #p.footer-text
-          = [ t('.footer.copyright'),
+          = [ t('.footer.copyright', :year => Date.today.year),
               t('.footer.credits.design', :name => 'Virginie Blancher'),
               t('.footer.credits.integration', :name => 'Isabelle Lechat'),
               t('.footer.credits.code', :name => 'Michel Belleville'),
               link_to(t('.footer.sitemap'), sitemap_url),
               link_to(t('.footer.contact'), contacts_url) ].join(' - ').html_safe
-          

@@ -1,113 +1,99 @@
-#main #right-column {
-  position: absolute;
-  top: 10px;
-  left: 24px;
-  height: 543px;
-  width: 160px;
-  text-align: justify; }
-  #main #right-column #welcome_title {
-    width: 100%;
-    height: 11px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    background-image: url("/images/bienvenue.jpg");
+#main {
+  border: none;
+  background-image: url(/images/pixels.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+  #main #virginie_blancher {
+    display: block;
+    width: 133px;
+    height: 45px;
+    position: absolute;
+    left: -133px;
+    top: 30px;
+    background-image: url(/images/virginie-blancher.png);
     background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center; }
-    #main #right-column #welcome_title span {
+    background-position: center;
+    background-repeat: no-repeat; }
+    #main #virginie_blancher span {
       display: none; }
-  #main #right-column #welcome {
+  #main #links {
     position: relative; }
-    #main #right-column #welcome .left_bracket,
-    #main #right-column #welcome .right_bracket {
+    #main #links #to_contact,
+    #main #links #to_bio_et_cv,
+    #main #links #to_chiyogami,
+    #main #links #to_couleur_bd,
+    #main #links #to_croquis,
+    #main #links #to_graphisme,
+    #main #links #to_illustration,
+    #main #links #to_liens,
+    #main #links #to_inspirations {
       position: absolute;
       display: block;
-      width: 6px;
-      height: 28px; }
-    #main #right-column #welcome .left_bracket {
-      background-image: url(/images/crochet_gauche.jpg);
-      left: -12px;
-      top: 0px; }
-    #main #right-column #welcome .right_bracket {
-      background-image: url(/images/crochet_droit.jpg);
-      right: -12px;
-      bottom: 0px; }
-  #main #right-column #intellectual_property {
-    position: absolute;
-    bottom: 0px;
-    left: 0px; }
-#main #links {
-  position: absolute;
-  top: 125px;
-  left: 250px;
-  width: 300px;
-  height: 300px; }
-  #main #links #to_bio_et_cv,
-  #main #links #to_chiyogami,
-  #main #links #to_couleur_bd,
-  #main #links #to_croquis,
-  #main #links #to_graphisme,
-  #main #links #to_illustration,
-  #main #links #to_liens,
-  #main #links #to_inspirations {
-    position: absolute;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center; }
-    #main #links #to_bio_et_cv span,
-    #main #links #to_chiyogami span,
-    #main #links #to_couleur_bd span,
-    #main #links #to_croquis span,
-    #main #links #to_graphisme span,
-    #main #links #to_illustration span,
-    #main #links #to_liens span,
-    #main #links #to_inspirations span {
-      display: none; }
-  #main #links #to_bio_et_cv {
-    top: 0px;
-    left: 170px;
-    width: 44px;
-    height: 163px;
-    background-image: url(/images/home_links/bio_et_cv.jpg); }
-  #main #links #to_chiyogami {
-    bottom: 0px;
-    right: 0px;
-    width: 78px;
-    height: 241px;
-    background-image: url(/images/home_links/chiyogami.jpg); }
-  #main #links #to_couleur_bd {
-    top: 0px;
-    left: 0px;
-    width: 160px;
-    height: 94px;
-    background-image: url(/images/home_links/couleur_bd.jpg); }
-  #main #links #to_croquis {
-    top: 0px;
-    right: 0px;
-    width: 78px;
-    height: 53px;
-    background-image: url(/images/home_links/croquis.jpg); }
-  #main #links #to_graphisme {
-    top: 170px;
-    left: 84px;
-    width: 129px;
-    height: 69px;
-    background-image: url(/images/home_links/graphisme.jpg); }
-  #main #links #to_illustration {
-    bottom: 0px;
-    left: 0px;
-    width: 206px;
-    height: 55px;
-    background-image: url(/images/home_links/illustration.jpg); }
-  #main #links #to_liens {
-    top: 105px;
-    left: 84px;
-    width: 76px;
-    height: 50px;
-    background-image: url(/images/home_links/liens.jpg); }
-  #main #links #to_inspirations {
-    top: 105px;
-    left: 0px;
-    width: 68px;
-    height: 133px;
-    background-image: url(/images/home_links/inspirations.png); }
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center; }
+      #main #links #to_contact span,
+      #main #links #to_bio_et_cv span,
+      #main #links #to_chiyogami span,
+      #main #links #to_couleur_bd span,
+      #main #links #to_croquis span,
+      #main #links #to_graphisme span,
+      #main #links #to_illustration span,
+      #main #links #to_liens span,
+      #main #links #to_inspirations span {
+        display: none; }
+    #main #links #to_contact {
+      top: 130px;
+      left: 20px;
+      width: 107px;
+      height: 13px;
+      background-image: url(/images/home_links/me-contacter.png); }
+    #main #links #to_bio_et_cv {
+      top: 475px;
+      left: 270px;
+      width: 27px;
+      height: 47px;
+      background-image: url(/images/home_links/bio-et-cv.png); }
+    #main #links #to_chiyogami {
+      top: 17px;
+      left: 155px;
+      width: 167px;
+      height: 90px;
+      background-image: url(/images/home_links/textile-et-papier-paint.png); }
+    #main #links #to_couleur_bd {
+      top: 317px;
+      left: 143px;
+      width: 230px;
+      height: 29px;
+      background-image: url(/images/home_links/couleur-bd.png); }
+    #main #links #to_croquis {
+      top: 508px;
+      left: 10px;
+      width: 67px;
+      height: 13px;
+      background-image: url(/images/home_links/croquis.png); }
+    #main #links #to_graphisme {
+      top: 190px;
+      left: 10px;
+      width: 329px;
+      height: 47px;
+      background-image: url(/images/home_links/graphisme.png); }
+    #main #links #to_illustration {
+      top: 450px;
+      left: -20px;
+      width: 94px;
+      height: 11px;
+      background-image: url(/images/home_links/illustrations.png); }
+    #main #links #to_liens {
+      top: 528px;
+      left: 70px;
+      width: 40px;
+      height: 12px;
+      background-image: url(/images/home_links/liens.png); }
+    #main #links #to_inspirations {
+      top: 470px;
+      left: 60px;
+      width: 100px;
+      height: 28px;
+      background-image: url(/images/home_links/inspirations-et-photos.png); }

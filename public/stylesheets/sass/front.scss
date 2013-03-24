@@ -1,31 +1,17 @@
 @import 'dimensions';
 #main {
   position: absolute;
-  top: 50px;
   left: 50%;
   margin-left: -$main_width / 2;
   width: $main_width - $main_padding_width * 2;
   height: $main_height - $main_padding_height * 2;
   padding: $main_padding_height $main_padding_width;
-  border: solid 1px #CCC;
+  border: solid 1px #ccc;
   #header {
     position: absolute;
     left: 0px;
     bottom: 100%;
     width: 100%;
-    #contact_link {
-      display: block;
-      position: absolute;
-      right: 0px;
-      bottom: 3px;
-      padding-left: 114px;
-      background: {
-        image: url("/images/tiret-rose.jpg");
-        repeat: no-repeat;
-        position: 0px 0px;
-        color: transparent;
-      }
-    }
   }
   #breadcrumb {
     h1 {
@@ -49,6 +35,11 @@
     top: 100%;
     width: 100%;
     padding-top: 8px;
+    padding-bottom: 30px;
     text-align: center;
+    &,
+    a {
+      color: #777;
+    }
   }
 }

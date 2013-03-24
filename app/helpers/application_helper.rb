@@ -104,7 +104,7 @@ module ApplicationHelper
         options['data-new-url'] = new_admin_external_link_path(
           :section => section)
       end
-      ( content_tag(:h2, "[#{section}]") + "\n" +
+      ( content_tag(:h2, section) + "\n" +
         content_tag(:ul, options) do
           external_links.map { |external_link|
             external_link_tag(external_link)
