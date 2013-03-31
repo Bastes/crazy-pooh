@@ -53,7 +53,7 @@ module ApplicationHelper
           :section => section,
           :subsection => subsection)
       end
-      ( content_tag(:h2, "[#{subsection}]") + "\n" +
+      ( content_tag(:h2, "#{subsection}") + "\n" +
         content_tag(:ul, options) do
           achievements.map { |achievement|
             achievement_thumbnail_tag(achievement)
