@@ -30,7 +30,11 @@ gem 'paperclip'
 gem "mail"
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
+
+group :development do
+  gem 'foreman'
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'
