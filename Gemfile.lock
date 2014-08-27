@@ -53,6 +53,7 @@ GEM
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
+    pg (0.17.1)
     polyglot (0.3.3)
     rack (1.2.7)
     rack-force_domain (0.2.0)
@@ -110,6 +111,7 @@ DEPENDENCIES
   haml
   mail
   paperclip
+  pg
   rack-force_domain
   rails (= 3.0.20)
   rails_12factor
